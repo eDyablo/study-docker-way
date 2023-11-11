@@ -3,6 +3,8 @@
 
 # Course introduction
 
+<font size=5>Be prepared and know what to expect</font>
+
 [Homework](./homework/README.md)
 
 ## Study materials

@@ -3,6 +3,8 @@
 
 # Run a container from built image
 
+<font size=5>Be able to test and tweak a container image</font>
+
 # Study materials
 
 [Docker run](https://capgemini.udemy.com/course/learn-docker/learn/lecture/7894016#overview)
