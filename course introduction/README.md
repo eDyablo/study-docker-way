@@ -3,7 +3,7 @@
 
 # Course introduction
 
-<h3>Be prepared and know what to expect</h3>
+**Be prepared and know what to expect**
 
 [Homework](./homework/README.md)
 
