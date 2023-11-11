@@ -3,7 +3,7 @@
 
 # Build with multi stage
 
-<font size=5>Build concise images</font>
+Build concise images
 
 ---
 >**[Back](../README.md)**

@@ -3,7 +3,7 @@
 
 # Build with dockerfile
 
-<font size=5>Be able to declaratively define a container image</font>
+Be able to declaratively define a container image
 
 # Study materials
 

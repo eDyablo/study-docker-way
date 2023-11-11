@@ -3,7 +3,7 @@
 
 # Run a container from built image
 
-<font size=5>Be able to test and tweak a container image</font>
+Be able to test and tweak a container image
 
 # Study materials
 

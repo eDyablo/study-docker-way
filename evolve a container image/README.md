@@ -3,7 +3,7 @@
 
 # Evolve a container image
 
-<font size=5>Become able to extend existing container image without writing Dockerfile</font>
+Become able to extend existing container image without writing Dockerfile
 
 # Study materials
 

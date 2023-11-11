@@ -3,7 +3,7 @@
 
 # Use container image
 
-<font size=5>Be able to use existing container images</font>
+Be able to use existing container images
 
 ## Study materials
 

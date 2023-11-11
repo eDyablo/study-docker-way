@@ -3,7 +3,7 @@
 
 # Pesistence
 
-<font size=5>Use container volumes and mounts</font>
+Use container volumes and mounts
 
 # Study materials
 

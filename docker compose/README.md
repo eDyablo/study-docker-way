@@ -3,7 +3,7 @@
 
 # Docker compose
 
-<font size=5>Use groups of containers as a whole</font>
+Use groups of containers as a whole
 
 ---
 >**[Back](../README.md)**

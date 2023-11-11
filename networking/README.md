@@ -3,7 +3,7 @@
 
 # Networking
 
-<font size=5>Hands on on docker networking</font>
+Hands on on docker networking
 
 # Study materials
 

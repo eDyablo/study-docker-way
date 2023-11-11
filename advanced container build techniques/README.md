@@ -3,7 +3,7 @@
 
 # Advanced build techmiques
 
-<font size=5>Use Dockerfile as template and more</font>
+Use Dockerfile as template and more
 
 ---
 >**[Back](../README.md)**

@@ -1,11 +1,9 @@
-{::options parse_block_html="true" /}
-
 >**[Back](../README.md)**
 &emsp;[Home](/README.md)
 
 # Course introduction
 
-<font size=5>Be prepared and know what to expect</font>
+Be prepared and know what to expect
 
 [Homework](./homework/README.md)
 
