@@ -33,6 +33,18 @@ Shortly, containers are small and lightweight execution environments that make s
 
 ![The virtualization and container infrastructure](https://images.idgesg.net/images/article/2017/06/virtualmachines-vs-containers-100727624-orig.jpg)
 
+Unlike virtual machines, containers use controlled portions of the host operating system’s resources, which means elements aren’t as strictly isolated as they would be on a VM.
+
+Containers are significantly more lightweight and closer to the metal than virtual machines, but they do incur some performance overhead. If your workload requires bare-metal speed, a container will get you close but not all the way there.
+
+### Containers advantages
+
+Containers let applications and their environments be kept clean and minimal by isolating them.
+
+Containers make it easier for developers to compose the building blocks of an application into a modular unit.
+
+Because containers are lightweight, developers can launch lots of them.
+
 ## History of containers
 
 | Year | Event | Details
