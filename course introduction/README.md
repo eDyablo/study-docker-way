@@ -32,9 +32,14 @@ The next part's purpose is for questions regarding the session topic and questio
 
 During the demonstration part you may interrupt and ask questions but I encourage you to postpone the questions to the second part  if it's possible.
 
+This is it about the course purpose and structure and we are ready to actually start the course.
+So lets jump right in.
+
 ## What is Docker?
 
 In simple words Docker helps build lightweight and portable software containers that simplify application development, testing, and deployment.
+
+Of course Docker is a lot more complicated than this simple definition. But from a user point of you it's a command-line or UI tool that allows to create, maintain and manage containers on the user's system.
 
 ### What are containers?
 
@@ -42,11 +47,15 @@ Shortly, containers are small and lightweight execution environments that make s
 
 >Self-contained units of software you can deliver from a server over there to a server over there, from your laptop to EC2 to a bare-metal giant server, and it will run in the same way because it is isolated at the process level and has its own file system.
 
+Again, there is a lot more behind this simple definition but fundamental idea is ability to use easy deployable self-contained software components running in isolation.
+
+Before containers we were using virtual machines for the same purpose. Let's compare container to virtual machines.
+
 ![The virtualization and container infrastructure](https://images.idgesg.net/images/article/2017/06/virtualmachines-vs-containers-100727624-orig.jpg)
 
 Unlike virtual machines, containers use controlled portions of the host operating system’s resources, which means elements aren’t as strictly isolated as they would be on a VM.
 
-Containers are significantly more lightweight and closer to the metal than virtual machines, but they do incur some performance overhead. If your workload requires bare-metal speed, a container will get you close but not all the way there.
+Containers are significantly more lightweight and closer to the metal than virtual machines, but they do incur some performance overhead. If our workload requires bare-metal speed, a container will get us close but not all the way there.
 
 ### Containers advantages
 
