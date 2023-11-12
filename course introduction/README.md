@@ -21,6 +21,18 @@ Each session have a set of recommended materials that you can use to get more de
 
 Of course you will have questions regarding the topics will be covered on sessions and about homework assignments. We will try to answer all your questions during the learning sessions.
 
+## What is Docker?
+
+In simple words Docker helps build lightweight and portable software containers that simplify application development, testing, and deployment.
+
+### What are containers?
+
+Shortly, containers are small and lightweight execution environments that make shared use of the operating system kernel but otherwise run in isolation from one another.
+
+>Self-contained units of software you can deliver from a server over there to a server over there, from your laptop to EC2 to a bare-metal giant server, and it will run in the same way because it is isolated at the process level and has its own file system.
+
+![The virtualization and container infrastructure](https://images.idgesg.net/images/article/2017/06/virtualmachines-vs-containers-100727624-orig.jpg)
+
 ## History of containers
 
 | Year | Event | Details
@@ -39,6 +51,19 @@ Of course you will have questions regarding the topics will be covered on sessio
 | **2017** | Container Tools Become Mature | Hundreds of tools have been developed to make container management easier<br><br>Containerd<br>rkt<br>Kubernetes
 | 2018 | The Gold Standard | The massive adoption of Kubernetes
 | 2019 | A Shifting Landscape | New runtime engines now started replacing the Docker runtime engine
+
+### Docker components
+
+| Name | Purpose
+|- |-
+| Docker image | A portable, read-only, executable file containing the instructions for creating a container
+| Dockerfile | A text file provides a set of instructions to build a container image
+| Docker run utility | A tool to manage images and control containers
+| Docker Hub | A registry where container images can be stored, shared, and managed
+| Docker Engine | The core of Docker that ncludes a long-running daemon process, APIs and command-line interface
+| Docker Machine | A tool used to install and manage Docker Engine on various virtual hosts or older versions of macOS and Windows
+
+![Docker architecture](https://aurigait.com/wp-content/uploads/2023/10/docker-architecture.png)
 
 ### [Homework](./homework/README.md)
 
@@ -61,6 +86,8 @@ Of course you will have questions regarding the topics will be covered on sessio
 ### Links
 
 [A brief history of containers](https://blog.aquasec.com/a-brief-history-of-containers-from-1970s-chroot-to-docker-2016)
+
+[What is Docker? The spark for the container revolution](https://www.infoworld.com/article/3204171/what-is-docker-the-spark-for-the-container-revolution.html)
 
 [chroot]: https://en.wikipedia.org/wiki/Chroot
 [cgroups]: https://en.wikipedia.org/wiki/Cgroups
