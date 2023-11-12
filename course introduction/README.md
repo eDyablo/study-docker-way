@@ -71,6 +71,8 @@ Shortly, containers are small and lightweight execution environments that make s
 
 ## Study materials
 
+[Docker docs](https://docs.docker.com/get-started/)
+
 [Docker overview](https://capgemini.udemy.com/course/learn-docker/learn/lecture/7894186#overview)
 
 [Introduction to Docker](https://capgemini.udemy.com/course/docker-tutorial/learn/lecture/15717962#overview)
