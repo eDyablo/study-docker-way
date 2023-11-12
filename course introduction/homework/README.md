@@ -16,7 +16,7 @@ docker-compose up
 ```
 
 Do the following steps.
-1. Install docker and docker-compose using any suitable for your system(workstation) way.
+1. Install docker and docker-compose using any suitable for your system(workstation) way. You can find instructions on the [official Docker site](https://www.docker.com/get-started/).
 
 2. Modify [`docker-compose.yaml`](./docker-compose.yaml) file to use `hello-seattle` container image and run the following commands.
 
