@@ -47,7 +47,7 @@ Shortly, containers are small and lightweight execution environments that make s
 
 >Self-contained units of software you can deliver from a server over there to a server over there, from your laptop to EC2 to a bare-metal giant server, and it will run in the same way because it is isolated at the process level and has its own file system.
 
-Again, there is a lot more behind this simple definition but fundamental idea is ability to use easy deployable self-contained software components running in isolation.
+Again, there is a lot more behind this simple definition but fundamental idea is ability to use easy deployable self-contained software components running in isolation the same way anywhere.
 
 Before containers we were using virtual machines for the same purpose. Let's compare container to virtual machines.
 
