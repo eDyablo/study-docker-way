@@ -11,7 +11,7 @@ The goal of this course is to learn how to use Docker and the tools directly rel
 
 The goal of this session is to give you an idea what the course is really about, what to expect and how to be prepared.
 
-So the course is about the Docker itself and the tools that are usually used with it. This course is rather practical than theoretical.
+So the course is about the Docker itself and the tools that are usually used with it. We are trying to make this course rather practical than theoretical with a focus on problems we are facing in a wild.
 
 The skills acquired during the course should be sufficient to perform ninety-five percent of the tasks that you may encounter in your work.
 
@@ -27,12 +27,13 @@ Each session have a set of recommended materials that you can use to get more de
 
 Of course you will have questions regarding the topics being covered on a session and about homework assignments. We will try to answer all your questions during the learning sessions.
 
-So, each learning session will start with demonstration part during which we will see how to use tools for a tasks related to the session topic.
-The next part's purpose is for questions regarding the session topic and questions that you may had after reading the sudying materials for the previous session. Then we will discuss issues occured while working on homework assignment.
+Each learning session is consists of four parts. It starts with demonstration part during which we will see how to use tools for a tasks related to the session topic.
+The next part's purpose is for questions regarding the current session topic and questions that you may had after reading the sudying materials for the previous session. Then we will discuss issues occured while working on previous homework assignment. On the final part we will quickly review the assignment you will have to complete before the next learning session. So you'll have a chance to ask questions before they occur when you will be on your own.
 
-During the demonstration part you may interrupt and ask questions but I encourage you to postpone the questions to the second part  if it's possible.
+During the demonstration part you may interrupt and ask questions but I encourage you to postpone the questions to the second part if it's possible.
 
 This is it about the course purpose and structure and we are ready to actually start the course.
+
 So lets jump right in.
 
 ## What is Docker?
