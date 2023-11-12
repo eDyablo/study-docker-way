@@ -99,6 +99,7 @@ Shortly, containers are small and lightweight execution environments that make s
 [cgroups]: https://en.wikipedia.org/wiki/Cgroups
 [Linux namespaces]: https://en.wikipedia.org/wiki/Linux_namespaces
 [YAML]: https://en.wikipedia.org/wiki/YAML
+
 ---
 >**[Back](../README.md)**
 &emsp;[Home](/README.md)
