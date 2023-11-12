@@ -61,10 +61,13 @@ Containers are significantly more lightweight and closer to the metal than virtu
 ### Containers advantages
 
 Containers let applications and their environments be kept clean and minimal by isolating them.
+Everytime we are running a container it starts from a clean environment not affected by other environments. Once it's done its job all the modification done to the container during its lifetime is wiped out. Except the case when we are intentionally maintaining its state.
 
 Containers make it easier for developers to compose the building blocks of an application into a modular unit.
+Container is a self-contained component that consist of executables and environment sufficient to run these executables. At the same time, containers can easily communicate with each other or share data forming a complete application component. Different applications can easily use the same container images avoiding duplication of effort to setup executables and environments.
 
 Because containers are lightweight, developers can launch lots of them.
+It's much easier or even possible to run dozens of containers on a single machine then run the same amount of virtual machines.
 
 ## History of containers
 
