@@ -9,7 +9,7 @@ Hello everyone and welcome to the Docker course and its introductory session.
 
 The goal of this course is to learn how to use Docker and the tools directly related to it via practical examples.
 
-The goal of this session is to give you an idea what the course is really about, what to expect and how to be prepared.
+The goal of this particular session is to give you an idea what the course is really about, what to expect and how to be prepared.
 
 So the course is about the Docker itself and the tools that are usually used with it. We are trying to make this course rather practical than theoretical with a focus on problems we are facing in a wild.
 
@@ -30,7 +30,7 @@ Of course you will have questions regarding the topics being covered on a sessio
 Each learning session is consists of four parts. It starts with demonstration part during which we will see how to use tools for a tasks related to the session topic.
 The next part's purpose is for questions regarding the current session topic and questions that you may had after reading the sudying materials for the previous session. Then we will discuss issues occured while working on previous homework assignment. On the final part we will quickly review the assignment you will have to complete before the next learning session. So you'll have a chance to ask questions before they occur when you will be on your own.
 
-During the demonstration part you may interrupt and ask questions but I encourage you to postpone the questions to the second part if it's possible.
+During the demonstration part you may interrupt and ask questions but I encourage you to defer them to the second part if it's possible.
 
 This is it about the course purpose and structure and we are ready to actually start the course.
 
@@ -46,11 +46,13 @@ Of course Docker is a lot more complicated than this simple definition. But from
 
 Shortly, containers are small and lightweight execution environments that make shared use of the operating system kernel but otherwise run in isolation from one another.
 
+Let's refer to Docker authors quote sounded on the PyCon conference in year 2013.
+
 >Self-contained units of software you can deliver from a server over there to a server over there, from your laptop to EC2 to a bare-metal giant server, and it will run in the same way because it is isolated at the process level and has its own file system.
 
 Again, there is a lot more behind this simple definition but fundamental idea is ability to use easy deployable self-contained software components running in isolation the same way anywhere.
 
-Before containers we were using virtual machines for the same purpose. So let's compare containers to virtual machines.
+But before containers were started circulating out we were using VMs for that purpose.
 
 ![The virtualization and container infrastructure](https://images.idgesg.net/images/article/2017/06/virtualmachines-vs-containers-100727624-orig.jpg)
 
