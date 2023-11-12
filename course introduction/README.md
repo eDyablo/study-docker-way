@@ -5,11 +5,17 @@
 
 **Be prepared and know what to expect**
 
-The goal of this course is to learn how to use docker and the tools directly related to it via practical examples.
+Hello everyone and welcome to the Docker course and its introductory session.
+
+The goal of this course is to learn how to use Docker and the tools directly related to it via practical examples.
+
+The goal of this session is to give you an idea what the course is really about, what to expect and how to be prepared.
+
+So the course is about the Docker itself and the tools that are usually used with it. This course is rather practical than theoretical.
 
 The skills acquired during the course should be sufficient to perform ninety-five percent of the tasks that you may encounter in your work.
 
-There are no special requirements for the course participants. All you need is to be able to use your operating system command shell and be familiar with git version control system and its basic commands.
+There are no special requirements for the course participants. All that you need is to be able to use your operating system command-line shell and be familiar with git version control system and its basic commands.
 
 The course consits of ten learning sessions with a homework assignment for each.
 
@@ -19,7 +25,12 @@ We will not dive deeply into the theory, instead we will try to focus purely on 
 
 Each session have a set of recommended materials that you can use to get more details about the session topic.
 
-Of course you will have questions regarding the topics will be covered on sessions and about homework assignments. We will try to answer all your questions during the learning sessions.
+Of course you will have questions regarding the topics being covered on a session and about homework assignments. We will try to answer all your questions during the learning sessions.
+
+So, each learning session will start with demonstration part during which we will see how to use tools for a tasks related to the session topic.
+The next part's purpose is for questions regarding the session topic and questions that you may had after reading the sudying materials for the previous session. Then we will discuss issues occured while working on homework assignment.
+
+During the demonstration part you may interrupt and ask questions but I encourage you to postpone the questions to the second part  if it's possible.
 
 ## What is Docker?
 
