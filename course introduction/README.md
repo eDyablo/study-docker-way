@@ -71,6 +71,9 @@ It's much easier or even possible to run dozens of containers on a single machin
 
 ## History of containers
 
+Actually It's been a long time since containers first came into scene.
+Usually, for a better understanding of things, it is appropriate to refer to their history. From there we can get what inspired authors and see why things are what they are.
+
 | Year | Event | Details
 |-|-|-
 | **1979** | Unix V7 | Introduced [chroot] system call<br><br>Segregating file access for each process
