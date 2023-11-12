@@ -85,11 +85,13 @@ Shortly, containers are small and lightweight execution environments that make s
 
 [Installing Docker on Windows](https://capgemini.udemy.com/course/docker-tutorial/learn/lecture/15705124#overview)
 
-### Links
+### References
 
 [A brief history of containers](https://blog.aquasec.com/a-brief-history-of-containers-from-1970s-chroot-to-docker-2016)
 
 [What is Docker? The spark for the container revolution](https://www.infoworld.com/article/3204171/what-is-docker-the-spark-for-the-container-revolution.html)
+
+[Docker Series – Blog 1: Getting Started with Docker and Building Your First Image](https://aurigait.com/blog/docker-series-blog-1-getting-started-with-docker-and-building-your-first-image/)
 
 [chroot]: https://en.wikipedia.org/wiki/Chroot
 [cgroups]: https://en.wikipedia.org/wiki/Cgroups
