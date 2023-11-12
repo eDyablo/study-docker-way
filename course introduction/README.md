@@ -60,7 +60,7 @@ Shortly, containers are small and lightweight execution environments that make s
 | Dockerfile | A text file provides a set of instructions to build a container image
 | Docker run utility | A tool to manage images and control containers
 | Docker Hub | A registry where container images can be stored, shared, and managed
-| Docker Engine | The core of Docker that ncludes a long-running daemon process, APIs and command-line interface
+| Docker Engine | The core of Docker that includes a long-running daemon process, APIs and command-line interface
 | Docker Machine | A tool used to install and manage Docker Engine on various virtual hosts or older versions of macOS and Windows
 
 ![Docker architecture](https://aurigait.com/wp-content/uploads/2023/10/docker-architecture.png)
