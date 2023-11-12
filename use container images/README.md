@@ -1,4 +1,4 @@
->**[Back](../README.md)**
+**[Back](../README.md)**
 &emsp;[Home](/README.md)
 
 # Use container image
@@ -22,5 +22,5 @@ Be able to use existing container images
 [Managing container images](https://capgemini.udemy.com/course/docker-tutorial/learn/lecture/15836320#overview)
 
 ---
->**[Back](../README.md)**
+**[Back](../README.md)**
 &emsp;[Home](/README.md)

@@ -1,4 +1,4 @@
->**[Back](../README.md)**
+**[Back](../README.md)**
 &emsp;[Home](/README.md)
 
 # Course introduction homework
@@ -36,7 +36,7 @@ git push
 ```
 
 ---
->**[Back](../README.md)**
+**[Back](../README.md)**
 &emsp;*[Top](./README.md)*
 &emsp;*[Homeworks](/README.md#homeworks)*
 &emsp;[Home](/README.md)
