@@ -1,11 +1,21 @@
->**[Back](../README.md)**
+**[Back](../README.md)**
 &emsp;[Home](/README.md)
 
 # Course introduction
 
 **Be prepared and know what to expect**
 
-[Homework](./homework/README.md)
+The goal of this course is to learn how to use docker and the tools directly related to it via practical examples.
+
+The skills acquired during the course should be sufficient to perform ninety-five percent of the tasks that you may encounter in your work.
+
+There are no special requirements for the course participants. All you need is to be able to use your operating system command shell and be familiar with git version control system and its basic commands.
+
+The course consits of ten learning sessions with a homework assignment for each.
+
+During the learning sessions we will discuss tools and recommended techniques of their usage.
+
+### [Homework](./homework/README.md)
 
 ## Study materials
 
