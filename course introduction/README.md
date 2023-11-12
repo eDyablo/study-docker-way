@@ -62,6 +62,8 @@ Shortly, containers are small and lightweight execution environments that make s
 | Docker Hub | A registry where container images can be stored, shared, and managed
 | Docker Engine | The core of Docker that includes a long-running daemon process, APIs and command-line interface
 | Docker Machine | A tool used to install and manage Docker Engine on various virtual hosts or older versions of macOS and Windows
+| Docker Compose | A command-line tool that uses [YAML] files to define and run multicontainer Docker applications
+| Docker Desktop | A desktop application providing a user-friendly way to build and share containerized applications
 
 ![Docker architecture](https://aurigait.com/wp-content/uploads/2023/10/docker-architecture.png)
 
@@ -92,6 +94,7 @@ Shortly, containers are small and lightweight execution environments that make s
 [chroot]: https://en.wikipedia.org/wiki/Chroot
 [cgroups]: https://en.wikipedia.org/wiki/Cgroups
 [Linux namespaces]: https://en.wikipedia.org/wiki/Linux_namespaces
+[YAML]: https://en.wikipedia.org/wiki/YAML
 ---
 >**[Back](../README.md)**
 &emsp;[Home](/README.md)
