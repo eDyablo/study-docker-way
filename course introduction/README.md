@@ -40,7 +40,7 @@ So lets jump right in.
 
 In simple words Docker helps build lightweight and portable software containers that simplify application development, testing, and deployment.
 
-Of course Docker is a lot more complicated than this simple definition. But from a user point of you it's a command-line or UI tool that allows to create, maintain and manage containers on the user's system.
+Of course Docker is a lot more complicated than this simple definition. But from a user point of view it's just a command-line or UI tool that allows to create, maintain and manage containers on the user's system.
 
 ### What are containers?
 
