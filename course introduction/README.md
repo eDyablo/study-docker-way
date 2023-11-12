@@ -50,7 +50,7 @@ Shortly, containers are small and lightweight execution environments that make s
 
 Again, there is a lot more behind this simple definition but fundamental idea is ability to use easy deployable self-contained software components running in isolation the same way anywhere.
 
-Before containers we were using virtual machines for the same purpose. Let's compare container to virtual machines.
+Before containers we were using virtual machines for the same purpose. So let's compare containers to virtual machines.
 
 ![The virtualization and container infrastructure](https://images.idgesg.net/images/article/2017/06/virtualmachines-vs-containers-100727624-orig.jpg)
 
