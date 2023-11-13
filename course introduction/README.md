@@ -118,7 +118,7 @@ Usually, for a better understanding of things, it is appropriate to refer to the
 
 [Introduction to Docker](https://capgemini.udemy.com/course/docker-tutorial/learn/lecture/15717962#overview)
 
-[Getting started Docker](https://capgemini.udemy.com/course/learn-docker/learn/lecture/15828544#overview)
+[Getting started with Docker](https://capgemini.udemy.com/course/learn-docker/learn/lecture/15828544#overview)
 
 [Docker on Mac](https://capgemini.udemy.com/course/learn-docker/learn/lecture/15828728#overview)
 
