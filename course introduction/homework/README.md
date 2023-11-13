@@ -22,7 +22,7 @@ To accomplish the assignment do the following steps.
 
 ## Setup your system
 
-#### Install docker and docker-compose using any suitable for your system(workstation) way.
+Install docker and docker-compose using any suitable for your system(workstation) way.
 
 You can find instructions on the [official Docker site](https://www.docker.com/get-started/).
 
