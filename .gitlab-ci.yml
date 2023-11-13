@@ -1,0 +1,14 @@
+check assignment:
+  rules:
+  - if: $CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH
+  stage: test
+  parallel:
+    matrix:
+    - SESSION_NAME:
+      - course introduction
+  trigger:
+    include:
+    - local: $SESSION_NAME/homework/.gitlab-ci.yml
+    strategy: depend
+  variables:
+    ASSIGNMENT_WORKDIR: $SESSION_NAME/homework

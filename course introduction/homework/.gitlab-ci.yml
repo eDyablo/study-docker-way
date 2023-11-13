@@ -1,0 +1,32 @@
+check assignment:
+  script:
+  - cd "$ASSIGNMENT_WORKDIR"
+  - |
+    file_to_test=docker.info
+    [ -f "$file_to_test" ] \
+      || (echo FAIL: "$file_to_test" file is missing; exit 1)
+    grep 'Client:.\+' "$file_to_test" \
+      && grep '^Server:\s*$' "$file_to_test" \
+      && grep '\s\+Containers:\s\+\d\+$' "$file_to_test" \
+      && grep '\s\+Images:\s\+\d\+$' "$file_to_test" \
+      && grep '\s\+Server Version:\s\+\S\+$' "$file_to_test" \
+      && grep '\s\+Storage Driver:\s\+\S\+$' "$file_to_test" \
+      && grep '\s\+Operating System:\(\s\+\S\+\)\+$' "$file_to_test" \
+      && grep '\s\+CPUs:\s\+\d\+$' "$file_to_test" \
+      && grep '\s\+Docker Root Dir:\s\+\S\+$' "$file_to_test" \
+    || (echo FAIL: content of "$file_to_test" is not match expectations; exit 1)
+  - |
+    file_to_test=docker.hello
+    [ -f "$file_to_test" ] \
+      || (echo FAIL: "$file_to_test" file is missing; exit 1)
+    grep '^Hello from DockerCon \d\{4\} (Seattle)!$' "$file_to_test" \
+      && grep '^[a-z A-Z]\+working correctly.$' "$file_to_test" \
+    || (echo FAIL: content of "$file_to_test" is not match expectations; exit 1)
+  - |
+    file_to_test=compose.hello
+    [ -f "$file_to_test" ] \
+      || (echo FAIL: "$file_to_test" file is missing; exit 1)
+    grep '^Attaching to homework-hello-1$' "$file_to_test" \
+      && grep '^homework-hello-1  . Hello from DockerCon \d\{4\} (Seattle)!$' "$file_to_test" \
+      && grep '^homework-hello-1  . [a-z A-Z]\+working correctly.$' "$file_to_test" \
+    || (echo FAIL: content of "$file_to_test" is not match expectations; exit 1)
