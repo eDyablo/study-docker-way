@@ -22,7 +22,7 @@ To accomplish the assignment do the following steps.
 
 ## Setup your system
 
-Install docker and docker-compose using any suitable for your system(workstation) way.
+Install `docker` and `docker-compose` using any suitable for your system(workstation) way.
 
 You can find instructions on the [official Docker site](https://www.docker.com/get-started/).
 
@@ -80,6 +80,13 @@ docker system info > docker.info
 docker run --rm hello-seattle > docker.hello
 docker-compose up > compose.hello
 docker-compose down
+```
+
+Notice that docker-compose might be installed on your system as a docker plugin. In this case instead of ```docker-compose``` use ```docker compose```.
+
+```sh
+docker compose up > compose.hello
+docker compose down
 ```
 
 ## Publish results
