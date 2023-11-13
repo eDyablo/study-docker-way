@@ -48,6 +48,14 @@ git push --set-upstream origin firstname-lastname
 
 You could visit the [remote repository branches](https://gitlab.lohika.com/study/docker/way/-/branches) and check if your new branch is listed there.
 
+#### Switch to the homework assignment directory
+
+Assuming that your current working directory is your local repository root directory (see above), you can use the change directory command shown below.
+
+```
+cd course\ introduction/homework
+```
+
 #### Modify [`docker-compose.yaml`](./docker-compose.yaml) file to use `hello-seattle` container image and run the following commands.
 
 ```sh
