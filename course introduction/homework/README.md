@@ -3,7 +3,7 @@
 
 # Course introduction homework
 
-Goal is to be able to successfully run the commands listed below.
+**Goal** is to be able to successfully run the commands listed below.
 
 ```sh
 docker system info
@@ -15,11 +15,13 @@ docker run
 docker-compose up
 ```
 
-Do the following steps.
+Do the following **steps**.
 
-1. Install docker and docker-compose using any suitable for your system(workstation) way. You can find instructions on the [official Docker site](https://www.docker.com/get-started/).
+#### Install docker and docker-compose using any suitable for your system(workstation) way.
 
-2. Clone the repository into your local system and create your branch.
+You can find instructions on the [official Docker site](https://www.docker.com/get-started/).
+
+#### Clone the repository into your local system and create your branch.
 
 To clone the repository use one of the following commands.
 ```sh
@@ -46,7 +48,7 @@ git push --set-upstream origin firstname-lastname
 
 You could visit the [remote repository branches](https://gitlab.lohika.com/study/docker/way/-/branches) and check if your new branch is listed there.
 
-3. Modify [`docker-compose.yaml`](./docker-compose.yaml) file to use `hello-seattle` container image and run the following commands.
+#### Modify [`docker-compose.yaml`](./docker-compose.yaml) file to use `hello-seattle` container image and run the following commands.
 
 ```sh
 docker system info > docker.info
@@ -55,7 +57,7 @@ docker-compose up > compose.hello
 docker-compose down
 ```
 
-4. Commit and push `compose.hello`, `docker.hello` and `docker.info` files.
+#### Commit and push `compose.hello`, `docker.hello` and `docker.info` files.
 
 ```sh
 git add --all
