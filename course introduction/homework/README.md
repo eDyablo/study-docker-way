@@ -53,7 +53,7 @@ You could visit the [remote repository branches](https://gitlab.lohika.com/study
 Assuming that your current working directory is your local repository root directory (see above), you can use the change directory command shown below.
 
 ```
-cd course\ introduction/homework
+cd 'course introduction/homework'
 ```
 
 #### Modify [`docker-compose.yaml`](./docker-compose.yaml) file to use `hello-seattle` container image and run the following commands.
