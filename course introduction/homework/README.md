@@ -72,6 +72,9 @@ cd 'course introduction/homework'
 Modify [`docker-compose.yaml`](./docker-compose.yaml) file to use `hello-seattle` container image and run the following commands.
 
 ## Run tests
+
+Run the following commands shown below in the particular order they are listed.
+
 ```sh
 docker system info > docker.info
 docker run --rm hello-seattle > docker.hello
