@@ -16,9 +16,37 @@ docker-compose up
 ```
 
 Do the following steps.
+
 1. Install docker and docker-compose using any suitable for your system(workstation) way. You can find instructions on the [official Docker site](https://www.docker.com/get-started/).
 
-2. Modify [`docker-compose.yaml`](./docker-compose.yaml) file to use `hello-seattle` container image and run the following commands.
+2. Clone the repository into your local system and create your branch.
+
+To clone the repository use one of the following commands.
+```sh
+git clone git@gitlab.lohika.com:study/docker/way.git ~/docker-course
+```
+```sh
+git clone https://gitlab.lohika.com/study/docker/way.git ~/docker-course
+```
+
+Switch to the local repository directory.
+```sh
+cd ~/docker-course
+```
+
+To create branch use checkout command and name the branch according to your first and last names.
+```sh
+git checkout -b firstname-lastname
+```
+
+Once you've created the branch you have to push it into remote repository.
+```sh
+git push --set-upstream origin firstname-lastname
+```
+
+You could visit the [remote repository branches](https://gitlab.lohika.com/study/docker/way/-/branches) and check if your new branch is listed there.
+
+3. Modify [`docker-compose.yaml`](./docker-compose.yaml) file to use `hello-seattle` container image and run the following commands.
 
 ```sh
 docker system info > docker.info
@@ -27,7 +55,7 @@ docker-compose up > compose.hello
 docker-compose down
 ```
 
-3. Commit and push `compose.hello`, `docker.hello` and `docker.info` files.
+4. Commit and push `compose.hello`, `docker.hello` and `docker.info` files.
 
 ```sh
 git add --all
