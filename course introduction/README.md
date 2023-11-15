@@ -15,7 +15,7 @@ The goal of this particular session is to give you an idea what the course is re
 
 At the session we will also talk about what docker is, take a short tour into its history and see from which components it consists of.
 
-## Cource composition and structure of learning sessions
+## Course composition and structure of learning sessions
 
 So the course is about the Docker itself and the tools that are usually used with it. We are trying to make this course rather practical than theoretical with a focus on problems we are facing in a wild.
 

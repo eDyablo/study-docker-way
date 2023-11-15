@@ -14,7 +14,7 @@
 
 [Networking](/networking/README.md)
 
-[Persistance](/persistence/README.md)
+[Persistence](/persistence/README.md)
 
 [Advanced container build techniques](/advanced%20container%20build%20techniques/README.md)
 
