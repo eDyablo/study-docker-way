@@ -32,7 +32,10 @@ The next part's purpose is for questions regarding the current session topic and
 
 During the demonstration part you may interrupt and ask questions but I encourage you to defer them to the second part if it's possible.
 
-This is it about the course purpose and structure and we are ready to actually start the course.
+---
+*Any questions so far?*
+
+This is it about the course's purpose and structure and we are ready to actually start the course.
 
 So lets jump right in.
 
