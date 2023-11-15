@@ -76,6 +76,30 @@ It's much easier or even possible to run dozens of containers on a single machin
 Actually It's been a long time since containers first came into scene.
 Usually, for a better understanding of things, it is appropriate to refer to their history. From there we can get what inspired authors and see why things are what they are.
 
+The history of containers begins as far back as 1979, when the chroot function appeared in the Linux system, which allowed the calling process to obtain isolated access to the file system.
+
+In continuation of this, in the 2000s, active development of tools for creating isolated environments is underway. The term "jails" was coined. The jail mechanism allows partition resources like file systems, network addresses and memory on a single computer system.
+
+In 2004 Solaris Containers added abitlity to make snapshots of the system, clone the snapshots and use them as separate environments.
+
+Soon after that Open Virtuzzo brings system-level virtualization technology, thus hardware component become not required for this.
+
+Another important milestone in the conteainers history is the appearance in 2006 of the [cgroups] mechanism that formerly known as *Process Containers*.
+
+The [cgroups] and [Linux namespaces] together gave birth to Linux Cotainers method know as [LXC]. This operating-system level virtualization method allows to run multiple isolated Linux systems on a host using a single Linux kernel without the need for starting any virtual machines, providing complete isolation of an application's view of the operating system.
+This is exactly what containers are in nowadays.
+
+But this is not the end of the story. From the moment of LXC appearance many questions and challenges arose. Like the idea of running the isolated environments on any operating system. So development was going on and in 2013 the Docker has come into play by offering an entire ecosystem for container management.
+
+And even then the history of containers didn't run to the end.
+Many questions regarding security was waiting for their resolution. Many attention was paid to the very significant aspect like scaling. So hundreds of tools have been developed to make container management easier. Systems like containerd and rkt(rocket) and Kubernetes were born.
+
+And with the massive adoptation of Kubernetes the containers became The Gold Standard in 2018.
+
+In present times нew runtime engines now started replacing the Docker runtime engine.
+But regardless of that containers and Docker has founded fundamental techniques and practices that will stay.
+So the knowledge you will get on the course will not lose its relevance.
+
 | Year | Event | Details
 |-|-|-
 | **1979** | Unix V7 | Introduced [chroot] system call<br><br>Segregating file access for each process
@@ -136,9 +160,10 @@ Usually, for a better understanding of things, it is appropriate to refer to the
 
 [Docker Series – Blog 1: Getting Started with Docker and Building Your First Image](https://aurigait.com/blog/docker-series-blog-1-getting-started-with-docker-and-building-your-first-image/)
 
-[chroot]: https://en.wikipedia.org/wiki/Chroot
 [cgroups]: https://en.wikipedia.org/wiki/Cgroups
+[chroot]: https://en.wikipedia.org/wiki/Chroot
 [Linux namespaces]: https://en.wikipedia.org/wiki/Linux_namespaces
+[LXC]: https://en.wikipedia.org/wiki/LXC
 [YAML]: https://en.wikipedia.org/wiki/YAML
 
 ---
