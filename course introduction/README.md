@@ -11,6 +11,8 @@ The goal of this course is to learn how to use Docker and the tools directly rel
 
 The goal of this particular session is to give you an idea what the course is really about, what to expect and how to be prepared.
 
+At the session we will also talk about what docker is, take a short tour into its history and see from which components it consists of.
+
 So the course is about the Docker itself and the tools that are usually used with it. We are trying to make this course rather practical than theoretical with a focus on problems we are facing in a wild.
 
 The skills acquired during the course should be sufficient to perform ninety-five percent of the tasks that you may encounter in your work.
@@ -138,6 +140,10 @@ As was mentioned, the Dotsker is an ecosystem. So let's see what composes it.
 | Docker Desktop | A desktop application providing a user-friendly way to build and share containerized applications
 
 ![Docker architecture](https://aurigait.com/wp-content/uploads/2023/10/docker-architecture.png)
+
+### Epilogue
+
+So, today we have defined the course composition and structure of learning sessions. We've got a little familiar with docker and its components. We tried to understand its idea and origin by delving into containers history.
 
 ### [Homework](./homework/README.md)
 
