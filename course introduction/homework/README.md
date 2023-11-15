@@ -24,7 +24,7 @@ To accomplish the assignment do the following steps.
 
 Install `docker` and `docker-compose` using any suitable for your system(workstation) way.
 
-You can find instructions on the [official Docker site](https://www.docker.com/get-started/).
+You can find instructions on the [official Docker site](https://www.docker.com/get-started/) or among the [session study materials](../README.md#study-materials).
 
 ## Setup your development environment
 
