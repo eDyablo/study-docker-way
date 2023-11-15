@@ -82,22 +82,24 @@ In continuation of this, in the 2000s, active development of tools for creating 
 
 In 2004 Solaris Containers added abitlity to make snapshots of the system, clone the snapshots and use them as separate environments.
 
-Soon after that Open Virtuzzo brings system-level virtualization technology, thus hardware component become not required for this.
+Soon after that Open Virtuzzo brought system-level virtualization technology, thus hardware component become not required for this.
 
-Another important milestone in the conteainers history is the appearance in 2006 of the [cgroups] mechanism that formerly known as *Process Containers*.
+Another important milestone in the containers history is the appearance in 2006 of the [cgroups] mechanism that formerly known as *Process Containers*. The [cgroups] limits, accounts for, and isolates resources usage of a processes collection. 
 
-The [cgroups] and [Linux namespaces] together gave birth to Linux Cotainers method know as [LXC]. This operating-system level virtualization method allows to run multiple isolated Linux systems on a host using a single Linux kernel without the need for starting any virtual machines, providing complete isolation of an application's view of the operating system.
+Together with [Linux namespaces] [cgroups] gave birth to Linux Cotainers method know as [LXC]. This operating-system level virtualization method allows to run multiple isolated Linux systems on a host using a single Linux kernel without the need for starting any virtual machines, providing complete isolation of an application's view of the operating system.
+
 This is exactly what containers are in nowadays.
 
 But this is not the end of the story. From the moment of LXC appearance many questions and challenges arose. Like the idea of running the isolated environments on any operating system. So development was going on and in 2013 the Docker has come into play by offering an entire ecosystem for container management.
 
-And even then the history of containers didn't run to the end.
-Many questions regarding security was waiting for their resolution. Many attention was paid to the very significant aspect like scaling. So hundreds of tools have been developed to make container management easier. Systems like containerd and rkt(rocket) and Kubernetes were born.
+And even then the history of containers didn't run to its end.
+Many questions regarding security were waiting for their resolution. Many attention was paid to the very significant aspect like scaling. So hundreds of tools have been developed to make container management easier. Systems like containerd and rkt(rocket) and Kubernetes were born.
 
 And with the massive adoptation of Kubernetes the containers became The Gold Standard in 2018.
 
 In present times new runtime engines now started replacing the Docker runtime engine.
 But regardless of that containers and Docker have founded fundamental principals, techniques and practices that will stay.
+
 So the knowledge you will get on the course will not lose its relevance.
 
 | Year | Event | Details
