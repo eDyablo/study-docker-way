@@ -96,7 +96,7 @@ Many questions regarding security was waiting for their resolution. Many attenti
 
 And with the massive adoptation of Kubernetes the containers became The Gold Standard in 2018.
 
-In present times нew runtime engines now started replacing the Docker runtime engine.
+In present times new runtime engines now started replacing the Docker runtime engine.
 But regardless of that containers and Docker has founded fundamental techniques and practices that will stay.
 So the knowledge you will get on the course will not lose its relevance.
 
