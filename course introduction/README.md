@@ -7,11 +7,15 @@
 
 Hello everyone and welcome to the Docker course and its introductory session.
 
+My name is ... and I will be your trainer for the entire course.
+
 The goal of this course is to learn how to use Docker and the tools directly related to it via practical examples.
 
 The goal of this particular session is to give you an idea what the course is really about, what to expect and how to be prepared.
 
 At the session we will also talk about what docker is, take a short tour into its history and see from which components it consists of.
+
+## Cource composition and structure of learning sessions
 
 So the course is about the Docker itself and the tools that are usually used with it. We are trying to make this course rather practical than theoretical with a focus on problems we are facing in a wild.
 
