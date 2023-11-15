@@ -121,6 +121,8 @@ So the knowledge you will get on the course will not lose its relevance.
 
 ### Docker components
 
+As was mentioned, the Dotsker is an ecosystem. So let's see what composes it.
+
 | Name | Purpose
 |- |-
 | Docker image | A portable, read-only, executable file containing the instructions for creating a container
