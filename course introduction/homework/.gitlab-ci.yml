@@ -5,7 +5,7 @@ check assignment:
     file_to_test=docker.info
     [ -f "$file_to_test" ] \
       || (echo FAIL: "$file_to_test" file is missing; exit 1)
-    grep 'Client:.\+' "$file_to_test" \
+    grep '^Client:.*' "$file_to_test" \
       && grep '^Server:\s*$' "$file_to_test" \
       && grep '\s\+Containers:\s\+\d\+$' "$file_to_test" \
       && grep '\s\+Images:\s\+\d\+$' "$file_to_test" \
