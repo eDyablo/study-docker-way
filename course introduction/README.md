@@ -13,7 +13,7 @@ The goal of this course is to learn how to use Docker and the tools directly rel
 
 The goal of this particular session is to give you an idea what the course is really about, what to expect and how to be prepared.
 
-At the session we will also talk about what docker is, take a short tour into its history and see from which components it consists of.
+At the session we will also talk about what docker is, take a short tour into its history and see which components it consists of.
 
 ## Course composition and structure of learning sessions
 
@@ -85,7 +85,7 @@ It's much easier or even possible to run dozens of containers on a single machin
 Actually It's been a long time since containers first came into scene.
 Usually, for a better understanding of things, it is appropriate to refer to their history. From there we can get what inspired authors and see why things are what they are.
 
-The history of containers begins as far back as 1979, when the chroot function appeared in the Linux system, which allowed the calling process to obtain isolated access to the file system.
+The history of containers begins as far back as 1979, when the [chroot] function appeared in the Linux system, which allowed the calling process to obtain isolated access to the file system.
 
 In continuation of this, in the 2000s, active development of tools for creating isolated environments is underway. The term "jails" was coined. The jail mechanism allows partition resources like file systems, network addresses and memory on a single computer system.
 
