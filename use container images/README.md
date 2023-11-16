@@ -3,7 +3,9 @@
 
 # Use container image
 
-Be able to use existing container images
+**Be able to use existing container images**
+
+### [Homework](./homework/README.md)
 
 ## Study materials
 

@@ -23,3 +23,5 @@
 # Homeworks
 
 [Course introduction homework](/course%20introduction/homework/README.md)
+
+[Use container images homework](/use%20container%20images/homework/README.md)
