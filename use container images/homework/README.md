@@ -39,7 +39,7 @@ git push
 ```
 
 ---
-**[Back](../README.md)**
-&emsp;*[Top](./README.md)*
-&emsp;*[Homeworks](/README.md#homeworks)*
-&emsp;[Home](/README.md)
+**[Top](#)**
+&emsp;[Session](../README.md)
+&emsp;[Course](/README.md)
+&emsp;[Homeworks](/README.md#homeworks)
