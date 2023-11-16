@@ -3,7 +3,21 @@
 
 # Evolve a container image
 
-Become able to extend existing container image without writing Dockerfile
+**Become able to extend existing container image without writing Dockerfile**
+
+## Draft
+- image structure
+  - layers
+    - re-use
+    - recomedations
+- run & commit
+- tagging (naming)
+  - name structure
+  - recomedations
+  - semver
+- push
+- homework
+  - extend existing publicly accessible image and push the result
 
 # Study materials
 

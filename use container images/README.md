@@ -5,6 +5,34 @@
 
 **Be able to use existing container images**
 
+## Draft
+- image is immitable by default
+- containers are stateless
+- container runs a specific task or process
+- pull
+  - public image registries
+  - image id
+- image metadata
+- run
+  - auto pull
+  - container id
+  - container name
+- ps
+  - status
+- inspect
+- exec
+  - exec vs run
+- attach
+- stop
+  - set time frame
+  - did not remove container from system
+- cp
+- restart
+- rm
+- rmi
+- homework
+  - run existing publicly accessible image and inspect
+
 ### [Homework](./homework/README.md)
 
 ## Study materials

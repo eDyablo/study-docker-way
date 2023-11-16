@@ -3,7 +3,24 @@
 
 # Networking
 
-Hands on on docker networking
+**Hands on on docker networking**
+
+## Draft
+- Architecture
+- Communicating between containers
+- Accessing container from host
+- Accessing host from container
+- Communicating between networks?
+- Basic commands
+  - create
+  - inspect
+- Example using netcat
+  - access container by IP
+  - using virtual network
+    - docker run
+    - docker network connect
+- homework
+  - run two containers communicating with oneanoter in a single network
 
 # Study materials
 

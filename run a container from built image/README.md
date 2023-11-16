@@ -3,7 +3,13 @@
 
 # Run a container from built image
 
-Be able to test and tweak a container image
+**Be able to test and tweak a container image**
+
+## Draft
+- envs
+- volumes
+- ports
+- networks
 
 # Study materials
 

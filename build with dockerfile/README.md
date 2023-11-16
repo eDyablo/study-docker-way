@@ -3,7 +3,21 @@
 
 # Build with dockerfile
 
-Be able to declaratively define a container image
+**Be able to declaratively define a container image**
+
+## Draft
+- docker build command
+  - parameters
+- each command creates new layer
+  - update layers
+- FROM
+- COPY
+  - context
+    - meaning of .
+  - .dockerignore
+- inspect resulting image
+- homework
+  - write docker file
 
 # Study materials
 
