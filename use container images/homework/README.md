@@ -23,7 +23,7 @@ Run the following steps to update your local repository branch with changes from
 ```sh
 git switch main
 git pull
-git switch firstname-lastname
+git switch student/firstname-lastname
 git merge main
 git push
 ```

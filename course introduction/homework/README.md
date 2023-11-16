@@ -47,12 +47,12 @@ cd ~/docker-course
 
 To create branch use checkout command and name the branch according to your first and last names.
 ```sh
-git checkout -b firstname-lastname
+git checkout -b student/firstname-lastname
 ```
 
 Once you've created the branch you have to push it into remote repository.
 ```sh
-git push --set-upstream origin firstname-lastname
+git push --set-upstream origin student/firstname-lastname
 ```
 
 You could visit the [remote repository branches](https://gitlab.lohika.com/study/docker/way/-/branches) and check if your new branch is listed there.
