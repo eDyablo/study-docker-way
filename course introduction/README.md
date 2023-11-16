@@ -185,5 +185,5 @@ So, today we have defined the course composition and structure of learning sessi
 [YAML]: https://en.wikipedia.org/wiki/YAML
 
 ---
-**[Course](../README.md)**
-&emsp;[Top](./README.md)
+**[Top](#)**
+&emsp;[Course](/README.md)

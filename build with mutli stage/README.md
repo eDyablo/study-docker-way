@@ -17,5 +17,5 @@
   - write two stages dockerfile
 
 ---
-**[Course](../README.md)**
-&emsp;[Top](./README.md)
+**[Top](#)**
+&emsp;[Course](/README.md)

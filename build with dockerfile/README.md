@@ -33,5 +33,5 @@
 [Building images with Dockerfiles](https://capgemini.udemy.com/course/docker-tutorial/learn/lecture/16123011#overview)
 
 ---
-**[Course](../README.md)**
-&emsp;[Top](./README.md)
+**[Top](#)**
+&emsp;[Course](/README.md)

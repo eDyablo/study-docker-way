@@ -32,5 +32,5 @@
   - write a dockerfile that uses all techniques shown on previous sessions
 
 ---
-**[Course](../README.md)**
-&emsp;[Top](./README.md)
+**[Top](#)**
+&emsp;[Course](/README.md)

@@ -24,5 +24,5 @@
   - write a dockerfile that can be used as a template
 
 ---
-**[Course](../README.md)**
-&emsp;[Top](./README.md)
+**[Top](#)**
+&emsp;[Course](/README.md)
