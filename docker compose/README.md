@@ -1,5 +1,6 @@
-**[Back](../README.md)**
-&emsp;[Home](/README.md)
+**[Course](../README.md)**
+&emsp;[Study materials](#study-materials)
+&emsp;[Homework assignment](./homework/README.md)
 
 # Docker compose
 
@@ -31,5 +32,5 @@
   - write a dockerfile that uses all techniques shown on previous sessions
 
 ---
-**[Back](../README.md)**
-&emsp;[Home](/README.md)
+**[Course](../README.md)**
+&emsp;[Top](./README.md)

@@ -1,5 +1,6 @@
-**[Back](../README.md)**
-&emsp;[Home](/README.md)
+**[Course](../README.md)**
+&emsp;[Study materials](#study-materials)
+&emsp;[Homework assignment](./homework/README.md)
 
 # Course introduction
 
@@ -184,6 +185,5 @@ So, today we have defined the course composition and structure of learning sessi
 [YAML]: https://en.wikipedia.org/wiki/YAML
 
 ---
-**[Back](../README.md)**
-&emsp;*[Top](./README.md)*
-&emsp;[Home](/README.md)
+**[Course](../README.md)**
+&emsp;[Top](./README.md)

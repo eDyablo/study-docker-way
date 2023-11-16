@@ -1,5 +1,5 @@
-**[Back](../README.md)**
-&emsp;[Home](/README.md)
+**[Session](../README.md)**
+&emsp;[Course](/README.md)
 
 # Course introduction homework
 

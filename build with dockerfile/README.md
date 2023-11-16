@@ -1,5 +1,6 @@
-**[Back](../README.md)**
-&emsp;[Home](/README.md)
+**[Course](../README.md)**
+&emsp;[Study materials](#study-materials)
+&emsp;[Homework assignment](./homework/README.md)
 
 # Build with dockerfile
 
@@ -32,5 +33,5 @@
 [Building images with Dockerfiles](https://capgemini.udemy.com/course/docker-tutorial/learn/lecture/16123011#overview)
 
 ---
-**[Back](../README.md)**
-&emsp;[Home](/README.md)
+**[Course](../README.md)**
+&emsp;[Top](./README.md)

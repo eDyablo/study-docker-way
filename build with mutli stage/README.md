@@ -1,5 +1,6 @@
-**[Back](../README.md)**
-&emsp;[Home](/README.md)
+**[Course](../README.md)**
+&emsp;[Study materials](#study-materials)
+&emsp;[Homework assignment](./homework/README.md)
 
 # Build with multi stage
 
@@ -16,5 +17,5 @@
   - write two stages dockerfile
 
 ---
-**[Back](../README.md)**
-&emsp;[Home](/README.md)
+**[Course](../README.md)**
+&emsp;[Top](./README.md)

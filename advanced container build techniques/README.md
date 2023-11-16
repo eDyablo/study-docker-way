@@ -1,5 +1,6 @@
-**[Back](../README.md)**
-&emsp;[Home](/README.md)
+**[Course](../README.md)**
+&emsp;[Study materials](#study-materials)
+&emsp;[Homework assignment](./homework/README.md)
 
 # Advanced build techmiques
 
@@ -23,5 +24,5 @@
   - write a dockerfile that can be used as a template
 
 ---
-**[Back](../README.md)**
-&emsp;[Home](/README.md)
+**[Course](../README.md)**
+&emsp;[Top](./README.md)

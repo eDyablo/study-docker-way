@@ -1,7 +1,8 @@
-**[Back](../README.md)**
-&emsp;[Home](/README.md)
+**[Course](../README.md)**
+&emsp;[Study materials](#study-materials)
+&emsp;[Homework assignment](./homework/README.md)
 
-# Use container image
+# Use container images
 
 **Be able to use existing container images**
 
@@ -52,5 +53,5 @@
 [Managing container images](https://capgemini.udemy.com/course/docker-tutorial/learn/lecture/15836320#overview)
 
 ---
-**[Back](../README.md)**
-&emsp;[Home](/README.md)
+**[Course](../README.md)**
+&emsp;[Top](./README.md)
