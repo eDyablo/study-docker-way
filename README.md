@@ -1,3 +1,5 @@
+[:raise_hand:](https://gitlab.lohika.com/study/docker/way/-/issues/new)
+
 # Sessions
 
 [Course introduction](/course%20introduction/README.md)
