@@ -1,4 +1,4 @@
-[:raised_hand:Report issue](https://gitlab.lohika.com/study/docker/way/-/issues/new)
+[:raised_hand: Report issue](https://gitlab.lohika.com/study/docker/way/-/issues/new)
 
 # Sessions
 
