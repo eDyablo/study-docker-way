@@ -1,5 +1,3 @@
-[:raised_hand: Report issue](https://gitlab.lohika.com/study/docker/way/-/issues/new)
-
 # Sessions
 
 [Course introduction](/course%20introduction/README.md)
@@ -27,3 +25,6 @@
 [Course introduction homework](/course%20introduction/homework/README.md)
 
 [Use container images homework](/use%20container%20images/homework/README.md)
+
+---
+<div align="right">[:raised_hand: Report issue](https://gitlab.lohika.com/study/docker/way/-/issues/new)</div>
