@@ -187,3 +187,4 @@ So, today we have defined the course composition and structure of learning sessi
 ---
 **[Top](#)**
 &emsp;[Course](/README.md)
+<div align="right">[:loudspeaker: Report issue](https://gitlab.lohika.com/study/docker/way/-/issues/new)</div>
