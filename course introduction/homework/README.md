@@ -81,7 +81,7 @@ Modify [`docker-compose.yaml`](./docker-compose.yaml) file to use `hello-seattle
 
 ### Run tests
 
-Run the following commands shown below in the particular order they are listed.
+Run the commands shown below in the particular order they are listed.
 
 ```sh
 docker system info > docker.info
