@@ -46,7 +46,7 @@ cd ~/docker-course
 ```
 
 To create branch use checkout command and name the branch according to your first and last names.
-> :warning: Please don't forget to put your names instead of placeholders.
+> :warning: Please don't forget to put your names instead of placeholders.<br>
 > :warning: Don not remove `student/` prefix from the branch name.
 
 ```sh
