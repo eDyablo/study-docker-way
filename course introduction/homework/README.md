@@ -59,6 +59,9 @@ git push --set-upstream origin student/firstname-lastname
 
 You could visit the [remote repository branches](https://gitlab.lohika.com/study/docker/way/-/branches) and check if your new branch is listed there.
 
+Once you've published your newly created branch the system automatically triggers pipeline that checks your homework assingments. You can see it by visiting [pipelines](https://gitlab.lohika.com/study/docker/way/-/pipelines?scope=branches) page and find pipeline referring your branch there.
+> :memo: At this moment the pipeline for your branch should fail meaning that you have to complete the assignment.
+
 ### Change current directory
 
 Switch to the homework assignment directory.
