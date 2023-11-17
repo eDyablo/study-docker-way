@@ -44,11 +44,15 @@ cd ~/docker-course
 ```
 
 To create branch use checkout command and name the branch according to your first and last names.
+> [:warning:] Please don't forget to put your names instead of placeholders.
+
 ```sh
 git checkout -b student/firstname-lastname
 ```
 
 Once you've created the branch you have to push it into remote repository.
+> [:warning:] Use the same branch name you have used in the command above.
+
 ```sh
 git push --set-upstream origin student/firstname-lastname
 ```
@@ -80,7 +84,7 @@ docker-compose up > compose.hello
 docker-compose down
 ```
 
-> :notes: Notice that docker-compose might be installed on your system as a docker plugin. In this case instead of ```docker-compose``` use ```docker compose```. You don't need to use them if the script above run with no error.
+> :memo: Notice that docker-compose might be installed on your system as a docker plugin. In this case instead of ```docker-compose``` use ```docker compose```. You don't need to use them if the script above run with no error.
 
 ```sh
 docker compose up > compose.hello
