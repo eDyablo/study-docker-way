@@ -80,8 +80,7 @@ docker-compose up > compose.hello
 docker-compose down
 ```
 
-> [!Note]
-> Notice that docker-compose might be installed on your system as a docker plugin. In this case instead of ```docker-compose``` use ```docker compose```. You don't need to use them if the script above run with no error.
+> :warning: Notice that docker-compose might be installed on your system as a docker plugin. In this case instead of ```docker-compose``` use ```docker compose```. You don't need to use them if the script above run with no error.
 
 ```sh
 docker compose up > compose.hello
