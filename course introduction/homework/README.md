@@ -80,7 +80,8 @@ docker-compose up > compose.hello
 docker-compose down
 ```
 
-Notice that docker-compose might be installed on your system as a docker plugin. In this case instead of ```docker-compose``` use ```docker compose```.
+> [!Note]
+> Notice that docker-compose might be installed on your system as a docker plugin. In this case instead of ```docker-compose``` use ```docker compose```. You don't need to use them if the script above run with no error.
 
 ```sh
 docker compose up > compose.hello
@@ -89,7 +90,7 @@ docker compose down
 
 ### Publish results
 
-Commit and push `compose.hello`, `docker.hello` and `docker.info` files.
+Commit and push `compose.hello`, `docker.hello` and `docker.info` files by running the following commands that commit and push all modified files from your local repository.
 
 ```sh
 git add --all
