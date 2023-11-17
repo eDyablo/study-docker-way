@@ -1,4 +1,4 @@
-check assignment:
+course introduction:
   script:
   - cd "$ASSIGNMENT_WORKDIR"
   - |
