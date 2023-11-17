@@ -119,7 +119,7 @@ In case you got negative result you can use the [pipelines](https://gitlab.lohik
 
 Once you reviewed failures and made appropriate modifications you have to repeat [run tests](#run-tests) and the following steps.
 
-:memo: Use "lather, rinse, repeat" principle.
+> :memo: Use "lather, rinse, repeat" principle.
 
 ---
 **[Top](#)**
