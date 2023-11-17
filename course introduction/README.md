@@ -148,7 +148,7 @@ As was mentioned, the Dotsker is an ecosystem. So let's see what composes it.
 
 ### Epilogue
 
-So, today we have defined the course composition and structure of learning sessions. We've got a little familiar with docker and its components. We tried to understand its idea and origin by delving into containers history.
+So, today we have defined the course composition and structure of learning sessions. We've become familiar with docker components. We tried to understand its idea and origin by delving into containers history.
 
 ### [Homework](./homework/README.md)
 
