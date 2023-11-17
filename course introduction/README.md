@@ -48,7 +48,7 @@ So lets jump right in.
 
 ## What is Docker?
 
-In simple words Docker helps build lightweight and portable software containers that simplify application development, testing, and deployment.
+In simple words, Docker is an ecosystem that helps build lightweight and portable software containers which simplify application development, testing, and deployment.
 
 Of course Docker is a lot more complicated than this simple definition. But from a user point of view it's just a command-line or UI tool that allows to create, maintain and manage containers on the user's system.
 
@@ -62,7 +62,7 @@ Let's refer to Docker authors quote sounded on the PyCon conference in year 2013
 
 Again, there is a lot more behind this simple definition but fundamental idea is ability to use easy deployable self-contained software components running in isolation the same way anywhere.
 
-But before containers were started circulating out we were using VMs for that purpose.
+But before containers were started circulating out we were using VMs for that purpose. Let's compare these two approaches.
 
 ![The virtualization and container infrastructure](https://images.idgesg.net/images/article/2017/06/virtualmachines-vs-containers-100727624-orig.jpg)
 
@@ -73,10 +73,10 @@ Containers are significantly more lightweight and closer to the metal than virtu
 ### Containers advantages
 
 Containers let applications and their environments be kept clean and minimal by isolating them.
-Everytime we are running a container it starts from a clean environment not affected by other environments. Once it's done its job all the modification done to the container during its lifetime is wiped out. Except the case when we are intentionally maintaining its state.
+Everytime we are running a container it starts from a clean environment not affected by other environments. Once it's done its job all the modification done to the container during its lifetime is wiped out. Except the case when we are intentionally maintaining its state. Using containers we can build repeatable environment we can rely on for testing.
 
 Containers make it easier for developers to compose the building blocks of an application into a modular unit.
-Because it's a self-contained component that consists of executables and environment sufficient to run these executables. At the same time, containers can easily communicate with each other or share data forming a complete application. Different applications can easily use the same container images avoiding duplication of effort to setup executables and environments.
+Because it's a self-contained component that consists of executables and environment sufficient to run these executables. At the same time, containers can easily communicate with each other or share data forming a complete application. Different applications can easily use the same container images avoiding duplication of effort to setup executables and corresponding environments.
 
 Because containers are lightweight, developers can launch lots of them.
 It's much easier or even possible to run dozens of containers on a single machine then run the same amount of virtual machines.
