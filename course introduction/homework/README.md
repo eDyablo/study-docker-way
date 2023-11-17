@@ -20,15 +20,13 @@ docker-compose up
 
 To accomplish the assignment do the following steps.
 
-## Setup your system
+### Setup your system
 
 Install `docker` and `docker-compose` using any suitable for your system(workstation) way.
 
 You can find instructions on the [official Docker site](https://www.docker.com/get-started/) or among the [session study materials](../README.md#study-materials).
 
-## Setup your development environment
-
-### Clone remote repository
+### Setup your development environment
 
 Clone the repository into your local system and create your branch.
 
@@ -67,11 +65,11 @@ Assuming that your current working directory is your local repository root direc
 cd 'course introduction/homework'
 ```
 
-## Apply required modifications
+### Apply required modifications
 
 Modify [`docker-compose.yaml`](./docker-compose.yaml) file to use `hello-seattle` container image and run the following commands.
 
-## Run tests
+### Run tests
 
 Run the following commands shown below in the particular order they are listed.
 
@@ -89,7 +87,7 @@ docker compose up > compose.hello
 docker compose down
 ```
 
-## Publish results
+### Publish results
 
 Commit and push `compose.hello`, `docker.hello` and `docker.info` files.
 
