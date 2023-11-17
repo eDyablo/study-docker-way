@@ -27,4 +27,4 @@
 [Use container images homework](/use%20container%20images/homework/README.md)
 
 ---
-<div align="right">[:loudspeaker: Report issue](https://gitlab.lohika.com/study/docker/way/-/issues/new)</div>
+<div><div align="left" float="left" width=50%>test</div><div align="right" float="left" width=50%>[:loudspeaker: Report issue](https://gitlab.lohika.com/study/docker/way/-/issues/new)</div></div>
