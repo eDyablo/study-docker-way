@@ -32,3 +32,4 @@
 ---
 **[Top](#)**
 &emsp;[Course](/README.md)
+<div align="right">[:loudspeaker: Report issue](https://gitlab.lohika.com/study/docker/way/-/issues/new)</div>
