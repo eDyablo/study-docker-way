@@ -28,6 +28,8 @@ You can find instructions on the [official Docker site](https://www.docker.com/g
 
 ### Setup your development environment
 
+> :memo: The step is has to be done once for the entire course.
+
 Clone the repository into your local system and create your branch.
 
 To clone the repository use one of the following commands.
@@ -103,6 +105,21 @@ git add --all
 git commit --all --message "hello docker"
 git push
 ```
+
+### Check the results
+
+Once you've pushed the changes the system automatically triggers pipeline that check the results of the homework assignment.
+
+To see the verification please visit [pipelines](https://gitlab.lohika.com/study/docker/way/-/pipelines?scope=branches) page and find the pipeline corresponding to your branch.
+You will also receive an email regarding of the results.
+
+### Troubleshooting
+
+In case you got negative result you can use the [pipelines](https://gitlab.lohika.com/study/docker/way/-/pipelines?scope=branches) to find failed pipeline step and its logs.
+
+Once you reviewed failures and made appropriate modifications you have to repeat [run tests](#run-tests) and the following steps.
+
+[:memo:] Use "lather, rinse, repeat" principle.
 
 ---
 **[Top](#)**
