@@ -6,7 +6,7 @@
 
 **Become able to extend existing container image without writing Dockerfile**
 
-## Draft
+## :construction: Draft
 - image structure
   - layers
     - re-use

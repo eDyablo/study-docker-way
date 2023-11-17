@@ -6,7 +6,7 @@
 
 **Be able to declaratively define a container image**
 
-## Draft
+## :construction: Draft
 - docker build command
   - parameters
 - each command creates new layer

@@ -6,7 +6,7 @@
 
 **Use groups of containers as a whole**
 
-## Draft
+## :construction: Draft
 - The purpose
   - application stack
   - a wrapper over docker

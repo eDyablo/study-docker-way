@@ -6,7 +6,7 @@
 
 **Be able to use existing container images**
 
-## Draft
+## :construction: Draft
 - image is immitable by default
 - containers are stateless
 - container runs a specific task or process
