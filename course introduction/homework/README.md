@@ -44,14 +44,14 @@ cd ~/docker-course
 ```
 
 To create branch use checkout command and name the branch according to your first and last names.
-> [:warning:] Please don't forget to put your names instead of placeholders.
+> :warning: Please don't forget to put your names instead of placeholders.
 
 ```sh
 git checkout -b student/firstname-lastname
 ```
 
 Once you've created the branch you have to push it into remote repository.
-> [:warning:] Use the same branch name you have used in the command above.
+> :warning: Use the same branch name you have used in the command above.
 
 ```sh
 git push --set-upstream origin student/firstname-lastname
