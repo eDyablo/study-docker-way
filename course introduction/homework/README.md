@@ -1,7 +1,7 @@
 **[Session](../README.md)**
 &emsp;[Course](/README.md)
 
-# Course introduction homework
+# **The Salutation**<br>Course introduction homework
 
 ## Goal
 The goal of the exercise is to be able to successfully run the commands listed below.
