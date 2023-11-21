@@ -78,7 +78,9 @@ Virtual machines run in isolation as a fully standalone system. This means that 
 
 Containers all share the same underlying hardware, it is possible that an exploit in one container could break out of the container and affect the shared hardware.
 
-Containers are significantly more lightweight and closer to the metal than virtual machines, but they do incur some performance overhead. If our workload requires bare-metal speed, a container will get us close but not all the way there.
+Because virtual machines encompass a full stack system they are time consuming to build and regenerate, and can take up a lot of storage space.
+
+Containers are significantly more lightweight and closer to the metal than virtual machines, but they still incur some performance overhead. If our workload requires bare-metal speed, a container will get us close but not all the way there.
 
 ### Containers advantages
 
