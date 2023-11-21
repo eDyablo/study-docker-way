@@ -14,7 +14,7 @@ The goal of this course is to learn how to use Docker and the tools directly rel
 
 The goal of this particular session is to give you an idea what the course is really about, what to expect and how to be prepared.
 
-At the session we will also talk about what docker is, take a short tour into its history and see which components it consists of.
+At the session we will also talk about what docker is, will take a short tour into its history and see which components it consists of.
 
 ## Course composition and structure of learning sessions
 
@@ -26,16 +26,16 @@ There are no special requirements for the course participants. All that you need
 
 The course consits of ten learning sessions with a homework assignment for each.
 
-During the learning sessions we will discuss tools and recommended techniques of their usage.
+During the learning sessions we will discuss tools and recommended techniques.
 
-We will not dive deeply into the theory, instead we will try to focus purely on practical aspects and demonstrations of the tools being studied. But don't worry, the accompanying explanations will be enough so that you won't have any questions about what this or that method is used for and why it is used in this particular way and not otherwise.
+We will not dive deeply into the theory, instead we will try to focus purely on practical aspects and demonstrations of the tools being studied. But don't worry, the accompanying explanations should be enough so that you might have no questions about what this or that method is used for, and why it is used in this particular way and not otherwise.
 
 Each session have a set of recommended materials that you can use to get more details about the session topic.
 
 Of course you will have questions regarding the topics being covered on a session and about homework assignments. We will try to answer all your questions during the learning sessions.
 
 Each learning session is consists of four parts. It starts with demonstration part during which we will see how to use tools for a tasks related to the session topic.
-The next part's purpose is for questions regarding the current session topic and questions that you may had after reading the sudying materials for the previous session. Then we will discuss issues occured while working on previous homework assignment. On the final part we will quickly review the assignment you will have to complete before the next learning session. So you'll have a chance to ask questions before they occur when you will be on your own.
+The next part's purpose is for questions regarding the current session topic and questions that you may had after reading the sudying materials for the previous session. Then we will discuss issues occured while working on previous homework assignment. On the final part we will quickly review the assignment you will have to complete before the next learning session.
 
 During the demonstration part you may interrupt and ask questions but I encourage you to defer them to the second part if it's possible.
 
@@ -54,6 +54,8 @@ Of course Docker is a lot more complicated than this simple definition. But from
 
 ### What are containers?
 
+So the Docker's main purpose it to manage containers. Then what are the containers?
+
 Shortly, containers are small and lightweight execution environments that make shared use of the operating system kernel but otherwise run in isolation from one another.
 
 Let's refer to Docker authors quote sounded on the PyCon conference in year 2013.
@@ -62,11 +64,19 @@ Let's refer to Docker authors quote sounded on the PyCon conference in year 2013
 
 Again, there is a lot more behind this simple definition but fundamental idea is ability to use easy deployable self-contained software components running in isolation the same way anywhere.
 
-But before containers were started circulating out we were using VMs for that purpose. Let's compare these two approaches.
+Self-contained means that they contain all the dependencies required to execute the contained software application. These dependencies include things like system libraries, external third-party code packages, and other operating system level applications.
+
+But before containers were started circulating out we were using VMs for resource virtualization. Let's compare these two approaches.
 
 ![The virtualization and container infrastructure](https://images.idgesg.net/images/article/2017/06/virtualmachines-vs-containers-100727624-orig.jpg)
 
+The key differentiator between containers and virtual machines is that virtual machines virtualize an entire machine down to the hardware layers and containers only virtualize software layers above the operating system level.
+
 Unlike virtual machines, containers use controlled portions of the host operating system’s resources, which means elements aren’t as strictly isolated as they would be on a VM.
+
+Virtual machines run in isolation as a fully standalone system. This means that virtual machines are immune to any exploits or interference from other virtual machines on a shared host.
+
+Containers all share the same underlying hardware, it is possible that an exploit in one container could break out of the container and affect the shared hardware.
 
 Containers are significantly more lightweight and closer to the metal than virtual machines, but they do incur some performance overhead. If our workload requires bare-metal speed, a container will get us close but not all the way there.
 
@@ -74,6 +84,8 @@ Containers are significantly more lightweight and closer to the metal than virtu
 
 Containers let applications and their environments be kept clean and minimal by isolating them.
 Everytime we are running a container it starts from a clean environment not affected by other environments. Once it's done its job all the modification done to the container during its lifetime is wiped out. Except the case when we are intentionally maintaining its state. Using containers we can build repeatable environment we can rely on for testing.
+
+Because containers are lightweight and only include high level software, they are very fast to modify and iterate on.
 
 Containers make it easier for developers to compose the building blocks of an application into a modular unit.
 Because it's a self-contained component that consists of executables and environment sufficient to run these executables. At the same time, containers can easily communicate with each other or share data forming a complete application. Different applications can easily use the same container images avoiding duplication of effort to setup executables and corresponding environments.
@@ -177,6 +189,8 @@ So, today we have defined the course composition and structure of learning sessi
 [What is Docker? The spark for the container revolution](https://www.infoworld.com/article/3204171/what-is-docker-the-spark-for-the-container-revolution.html)
 
 [Docker Series – Blog 1: Getting Started with Docker and Building Your First Image](https://aurigait.com/blog/docker-series-blog-1-getting-started-with-docker-and-building-your-first-image/)
+
+[Containers vs. virtual machines](https://www.atlassian.com/microservices/cloud-computing/containers-vs-vms)
 
 [cgroups]: https://en.wikipedia.org/wiki/Cgroups
 [chroot]: https://en.wikipedia.org/wiki/Chroot
