@@ -110,7 +110,7 @@ Soon after that Open Virtuzzo brought system-level virtualization technology, th
 
 Another important milestone in the containers history is the appearance in 2006 of the [cgroups] mechanism that formerly known as *Process Containers*. The [cgroups] limits, accounts for, and isolates resources usage of a processes collection. 
 
-Together with [Linux namespaces] [cgroups] gave birth to Linux Cotainers method know as [LXC]. This operating-system level virtualization method allows to run multiple isolated Linux systems on a host using a single Linux kernel without the need for starting any virtual machines, providing complete isolation of an application's view of the operating system.
+Together with [Linux namespaces] the [cgroups] gave birth to Linux Cotainers method know as [LXC]. This operating-system level virtualization method allows to run multiple isolated Linux systems on a host using a single Linux kernel without the need for starting any virtual machines, providing complete isolation of an application's view of the operating system.
 
 This is exactly what containers are in nowadays.
 
@@ -122,9 +122,7 @@ Many questions regarding security were waiting for their resolution. Many attent
 And with the massive adoptation of Kubernetes the containers became The Gold Standard in 2018.
 
 In present times new runtime engines now started replacing the Docker runtime engine.
-But regardless of that containers and Docker have founded fundamental principals, techniques and practices that will stay.
-
-So the knowledge you will get on the course will not lose its relevance.
+But regardless of that containers and Docker have founded fundamental principals, techniques and practices that will stay. So the knowledge you will get on the course will not lose its relevance.
 
 | Year | Event | Details
 |-|-|-
