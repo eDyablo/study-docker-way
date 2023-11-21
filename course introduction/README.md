@@ -54,7 +54,7 @@ Of course Docker is a lot more complicated than this simple definition. But from
 
 ### What are containers?
 
-So the Docker's main purpose it to manage containers. Then what are the containers?
+So the Docker's main purpose is to manage containers. Then what are the containers?
 
 Shortly, containers are small and lightweight execution environments that make shared use of the operating system kernel but otherwise run in isolation from one another.
 
