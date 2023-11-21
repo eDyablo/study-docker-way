@@ -121,7 +121,7 @@ Many questions regarding security were waiting for their resolution. Many attent
 
 And with the massive adoptation of Kubernetes the containers became The Gold Standard in 2018.
 
-In present times new runtime engines now started replacing the Docker runtime engine.
+In present times new runtime engines started replacing the Docker runtime engine.
 But regardless of that containers and Docker have founded fundamental principals, techniques and practices that will stay. So the knowledge you will get on the course will not lose its relevance.
 
 | Year | Event | Details
@@ -150,10 +150,10 @@ As was mentioned, the Dotsker is an ecosystem. So let's see what composes it.
 | Docker image | A portable, read-only, executable file containing the instructions for creating a container
 | Dockerfile | A text file provides a set of instructions to build a container image
 | Docker run utility | A tool to manage images and control containers
-| Docker Hub | A registry where container images can be stored, shared, and managed
-| Docker Engine | The core of Docker that includes a long-running daemon process, APIs and command-line interface
+| Docker Hub | A registry where container images can be stored and shared
+| Docker Engine | The core of Docker that includes a long-running daemon process, provides APIs and command-line interface
 | Docker Machine | A tool used to install and manage Docker Engine on various virtual hosts or older versions of macOS and Windows
-| Docker Compose | A command-line tool that uses [YAML] files to define and run multicontainer Docker applications
+| Docker Compose | A command-line tool that uses [YAML] files to define and run multicontainer applications
 | Docker Desktop | A desktop application providing a user-friendly way to build and share containerized applications
 
 ![Docker architecture](https://aurigait.com/wp-content/uploads/2023/10/docker-architecture.png)
