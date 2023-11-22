@@ -29,6 +29,10 @@
 
 [Docker Networking and Dockerizing Applications](https://capgemini.udemy.com/course/docker-tutorial/learn/lecture/16396228#overview)
 
+# References
+
+[How to Get A Docker Container IP Address - Explained with Examples](https://www.freecodecamp.org/news/how-to-get-a-docker-container-ip-address-explained-with-examples/)
+
 ---
 **[Top](#)**
 &emsp;[Course](/README.md)
