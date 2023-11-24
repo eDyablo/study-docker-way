@@ -1,0 +1,50 @@
+use container images:
+  script:
+  - cd "$ASSIGNMENT_WORKDIR"
+  - |
+    file_to_test=heroic.emergence
+    [ -f "$file_to_test" ] \
+      || (echo FAIL: "$file_to_test" file is missing; exit 1)
+    [ $(cat "$file_to_test" | wc -l) -eq 2 ] \
+      || (echo FAIL: "$file_to_test" consists of unexpected number of lines; exit 1)
+    [[ "$(cat "$file_to_test" | head -1 | tr -s ' ' | cut -d ' ' -f 6)" == "STATUS" ]] \
+      || (echo FAIL: content of "$file_to_test" does not match expectations; exit 1)
+    [[ "$(cat "$file_to_test" | tail -1 | grep -o '".\+"')" == '"sh /fable.sh"' ]] \
+      || (echo FAIL: heroic-show container has unexpected command; exit 1)
+    [[ "$(cat "$file_to_test" | tail -1 | grep -o ' Created\s\+heroic-show' | tr -s ' ' | cut -d ' ' -f 2-3)" == "Created heroic-show" ]] \
+      || (echo FAIL: heroic-show container was not properly created; exit 1)
+  - |
+    file_to_test=heroic.spirit
+    [ -f "$file_to_test" ] \
+      || (echo FAIL: "$file_to_test" file is missing; exit 1)
+    [ $(cat "$file_to_test" | wc -l) -eq 1 ] \
+      || (echo FAIL: "$file_to_test" consists of unexpected number of lines; exit 1)
+    [[ "$(cat "$file_to_test" | tail -1)" == 'A /fable.sh' ]] \
+      || (echo FAIL: fable.sh was not copied into heroic-show container; exit 1)
+  - |
+    file_to_test=heroic.deeds
+    [ -f "$file_to_test" ] \
+      || (echo FAIL: "$file_to_test" file is missing; exit 1)
+    [ $(cat "$file_to_test" | wc -l) -eq 2 ] \
+      || (echo FAIL: "$file_to_test" consists of unexpected number of lines; exit 1)
+    [[ "$(cat "$file_to_test" | head -1 | tr -s ' ' | cut -d ' ' -f 6)" == "STATUS" ]] \
+      || (echo FAIL: content of "$file_to_test" does not match expectations; exit 1)
+    [[ "$(cat "$file_to_test" | tail -1 | grep -o '".\+"')" == '"sh /fable.sh"' ]] \
+      || (echo FAIL: heroic-show container has unexpected command; exit 1)
+    [[ "$(cat "$file_to_test" | tail -1 | grep -o ' Up\s.\+heroic-show' | tr -s ' ' | cut -d ' ' -f 2)" == 'Up' ]] \
+      || (echo FAIL: heroic-show container was not properly started; exit 1)
+  - |
+    file_to_test=heroic.tale
+    rfc3339nano_pattern='\d\{4\}-\d\{2\}-\d\{2\}T\d\{2\}:\d\{2\}:\d\{2\}\.\d\{9\}Z'
+    [ -f "$file_to_test" ] \
+      || (echo FAIL: "$file_to_test" file is missing; exit 1)
+    [ $(cat "$file_to_test" | wc -l) -ge 2 ] \
+      || (echo FAIL: "$file_to_test" consists of unexpected number of lines; exit 1)
+    grep -v "^${rfc3339nano_pattern} .\+$" "$file_to_test" \
+      && (echo FAIL: missing timestamps in "$file_to_test" ; exit 1)
+    [ $(cat "$file_to_test" | head -300 | cut -d ' ' -f 2- | sort | uniq | wc -l) -eq 2 ] \
+      || (echo FAIL: content of "$file_to_test" does not match expectations; exit 1)
+    [[ "$(cat "$file_to_test" | head -1 | cut -d ' ' -f 2)" != 'secret' ]] \
+      || (echo FAIL: NAME environment variable was not set for the container; exit 1)
+    [[ "$(cat "$file_to_test" | head -2 | tail -1 | cut -d ' ' -f 2)" != 'champion' ]] \
+      || (echo FAIL: HERO environment variable was not set for the container; exit 1)

@@ -6,6 +6,7 @@ check assignment:
     matrix:
     - SESSION_NAME:
       - course introduction
+      - use container images
   trigger:
     include:
     - local: $SESSION_NAME/homework/.gitlab-ci.yml
