@@ -26,7 +26,7 @@ course introduction:
     file_to_test=compose.hello
     [ -f "$file_to_test" ] \
       || (echo FAIL: "$file_to_test" file is missing; exit 1)
-    grep '^Attaching to homework-hello-1$' "$file_to_test" \
-      && grep '^homework-hello-1  . Hello from DockerCon \d\{4\} (Seattle)!$' "$file_to_test" \
-      && grep '^homework-hello-1  . [a-z A-Z]\+working correctly.$' "$file_to_test" \
+    grep '^Attaching to homework[-_]hello[-_]1$' "$file_to_test" \
+      && grep '^\S*hello[-_]1  . Hello from DockerCon \d\{4\} (Seattle)!$' "$file_to_test" \
+      && grep '^\S*hello[-_]1  . [a-z A-Z]\+working correctly.$' "$file_to_test" \
     || (echo FAIL: content of "$file_to_test" is not match expectations; exit 1)
