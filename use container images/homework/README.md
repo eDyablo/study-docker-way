@@ -30,6 +30,8 @@ git merge origin/main --strategy-option theirs -m update
 git push
 ```
 
+> :memo: At this moment the pipeline for your branch should fail meaning that you have to complete the assignment.
+
 ### Change current directory
 
 Switch to the homework assignment directory.
