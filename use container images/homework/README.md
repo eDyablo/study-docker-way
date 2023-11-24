@@ -26,7 +26,7 @@ Run the following steps to update your local repository branch with changes from
 
 ```sh
 git fetch origin --prune
-git merge origin/main -m update
+git merge origin/main --strategy-option theirs -m update
 git push
 ```
 
