@@ -2,7 +2,7 @@
 
 [Course introduction](/course%20introduction/README.md)
 
-:soon: [Use container images](/use%20container%20images/README.md)
+[Use container images](/use%20container%20images/README.md)
 
 :soon: [Evolve a container image](/evolve%20a%20container%20image/README.md)
 
@@ -24,7 +24,7 @@
 
 [Course introduction homework](/course%20introduction/homework/README.md)
 
-:soon: [Use container images homework](/use%20container%20images/homework/README.md)
+[Use container images homework](/use%20container%20images/homework/README.md)
 
 ---
 <div align="right">[:loudspeaker: Report issue](https://gitlab.lohika.com/study/docker/way/-/issues/new)</div>
