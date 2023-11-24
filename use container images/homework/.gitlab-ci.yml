@@ -13,6 +13,7 @@ use container images:
       || (echo FAIL: heroic-show container has unexpected command; exit 1)
     [[ "$(cat "$file_to_test" | tail -1 | grep -o ' Created\s\+heroic-show' | tr -s ' ' | cut -d ' ' -f 2-3)" == "Created heroic-show" ]] \
       || (echo FAIL: heroic-show container was not properly created; exit 1)
+    echo Greetings hero!
   - |
     file_to_test=heroic.spirit
     [ -f "$file_to_test" ] \
@@ -21,6 +22,7 @@ use container images:
       || (echo FAIL: "$file_to_test" consists of unexpected number of lines; exit 1)
     [[ "$(cat "$file_to_test" | tail -1)" == 'A /fable.sh' ]] \
       || (echo FAIL: fable.sh was not copied into heroic-show container; exit 1)
+    echo Your spirit is strong.
   - |
     file_to_test=heroic.deeds
     [ -f "$file_to_test" ] \
@@ -33,6 +35,7 @@ use container images:
       || (echo FAIL: heroic-show container has unexpected command; exit 1)
     [[ "$(cat "$file_to_test" | tail -1 | grep -o ' Up\s.\+heroic-show' | tr -s ' ' | cut -d ' ' -f 2)" == 'Up' ]] \
       || (echo FAIL: heroic-show container was not properly started; exit 1)
+    echo Your deeds are famous.
   - |
     file_to_test=heroic.tale
     rfc3339nano_pattern='\d\{4\}-\d\{2\}-\d\{2\}T\d\{2\}:\d\{2\}:\d\{2\}\.\d\{9\}Z'
@@ -48,3 +51,4 @@ use container images:
       || (echo FAIL: NAME environment variable was not set for the container; exit 1)
     [[ "$(cat "$file_to_test" | head -2 | tail -1 | cut -d ' ' -f 2)" != 'champion' ]] \
       || (echo FAIL: HERO environment variable was not set for the container; exit 1)
+    echo Words about you will live in ages.
