@@ -442,17 +442,17 @@ The container image also consumes host system disk space. So, when we don't need
 docker rmi hello-world
 ```
 
-In case we need to clean up entire docker system by getting rid of all stopped containers and all dangling images we use the docker system prune command.
+In case we need to clean up entire docker system by getting rid of all stopped containers and all dangling images we use the [docker image prune] command.
 
 ```sh
-docker system prune
+docker image prune
 ```
 It might be the command reports that no space was reclaimed meaning there were no dangling images.
 
 The command also allows to remove not only dangling images but all images that are not used by any currently running container. To do this we use `--all` option.
 
 ```sh
-docker system prune --all
+docker image prune --all
 ```
 
 ## Container states and trasitions between them
@@ -503,6 +503,7 @@ On today's session we went through process of containers creation using existing
 [docker cp]: https://docs.docker.com/engine/reference/commandline/cp/
 [docker create]: https://docs.docker.com/engine/reference/commandline/create/
 [docker exec]: https://docs.docker.com/engine/reference/commandline/exec/
+[docker image prune]: https://docs.docker.com/engine/reference/commandline/image_prune/
 [docker images]: https://docs.docker.com/engine/reference/commandline/images/
 [docker logs]: https://docs.docker.com/engine/reference/commandline/logs/
 [docker ps]: https://docs.docker.com/engine/reference/commandline/ps/
