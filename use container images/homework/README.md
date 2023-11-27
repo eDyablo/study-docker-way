@@ -46,6 +46,8 @@ cd 'use container images/homework'
 
 Using [docker create] command create container named `heroic-show` from `alpine` image that should run command `sh /fable.sh` and have two environment variables `NAME` and `HERO`. Pass your name to the `NAME` variable, and for `HERO` variable use heroic name of your favorit superhero or use `valiant`.
 
+:warning: Plese do not modify `fable.sh` file.
+
 Run the following instruction that using [docker ps] command stores status of the created container.
 ```sh
 docker ps --filter name=heroic-show --all > heroic.emergence
