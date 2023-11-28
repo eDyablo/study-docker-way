@@ -1,0 +1,24 @@
+generate pipeline:
+  stage: .pre
+  artifacts:
+    paths:
+    - ${ASSIGNMENT_WORKDIR}/.gitlab-ci.dynamic.yaml
+    expire_in: 1 day
+  script:
+  - cd "$ASSIGNMENT_WORKDIR"
+  - |
+    DOCKERHUB_ACCOUNT=$(cat dockerhub-account.txt)
+    [ $DOCKERHUB_ACCOUNT ] || (echo FAIL: No Dockerhub account specified; exit 1)
+  - CONTAINER_TAG=${CI_COMMIT_BRANCH#student/}
+  - CONTAINER_REPOSITORY="${DOCKERHUB_ACCOUNT}/jadlospis"
+  - CONTAINER_IMAGE_NAME="${CONTAINER_REPOSITORY}:${CONTAINER_TAG}"
+  - eval "echo \"$(cat .gitlab-ci.dynamic.yaml.tpl)\"" > .gitlab-ci.dynamic.yaml
+
+trigger pipeline:
+  needs:
+  - job: generate pipeline
+  trigger:
+    include:
+    - artifact: evolve a container image/homework/.gitlab-ci.dynamic.yaml
+      job: generate pipeline
+    strategy: depend
