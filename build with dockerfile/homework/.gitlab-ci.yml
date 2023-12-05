@@ -1,0 +1,71 @@
+variables:
+  CONTAINER_IMAGE_NAME: ${CONTAINER_IMAGE_REGISTRY_USER}/drapel:${CI_COMMIT_REF_SLUG}
+
+build container image:
+  stage: build
+  resource_group: ${CI_PROJECT_NAME} ${CI_COMMIT_BRANCH}
+  image:
+    name: gcr.io/kaniko-project/executor:debug
+    entrypoint: [""]
+  variables:
+    DOCKERFILE_CONTEXT: $ASSIGNMENT_WORKDIR
+    DOCKERFILE_NAME: Dockerfile
+    KANIKO_EXECUTOR: /kaniko/executor
+  script:
+  - >
+    echo
+    "{\"auths\":{\"${CONTAINER_IMAGE_REGISTRY_HOST}\":{\"auth\":\"$(echo -n ${CONTAINER_IMAGE_REGISTRY_USER}:${CONTAINER_IMAGE_REGISTRY_PASSWORD} | base64)\"}}}"
+    > /kaniko/.docker/config.json
+  - >
+    $KANIKO_EXECUTOR
+    ${CONTAINER_IMAGE_NAME:+--destination=$CONTAINER_IMAGE_NAME}
+    ${DOCKERFILE_CONTEXT:+--context="$DOCKERFILE_CONTEXT"}
+    ${DOCKERFILE_NAME:+--dockerfile="$DOCKERFILE_NAME"}
+
+test container image:
+  needs:
+  - job: build container image
+  stage: test
+  resource_group: !reference [build container image, resource_group]
+  image: docker
+  services:
+  - docker:dind
+  script:
+  - |
+    docker pull $CONTAINER_IMAGE_NAME
+    entrypoint_slug=$(docker image inspect $CONTAINER_IMAGE_NAME \
+      --format='{{ len .Config.Entrypoint }} {{ index .Config.Entrypoint 0 }}')
+    entrypoint_script_path="$(docker image inspect $CONTAINER_IMAGE_NAME \
+      --format='{{ index .Config.Entrypoint 1 }}')"
+    working_dir="$(docker image inspect $CONTAINER_IMAGE_NAME \
+      --format='{{ .Config.WorkingDir }}')"
+    cmd="$(docker image inspect $CONTAINER_IMAGE_NAME \
+      --format='{{ join .Config.Cmd " " }}')"
+    second_env=$(docker image inspect $CONTAINER_IMAGE_NAME \
+      --format='{{ index .Config.Env 1 }}')
+    env_name=${second_env%=*}
+    font_name=${second_env#FONT=}
+    author_label=$(docker image inspect $CONTAINER_IMAGE_NAME \
+      --format='{{ .Config.Labels.author }}')
+    [[ "$entrypoint_slug" == "2 sh" ]] \
+      || (echo FAIL: Image entrypoint does not match expectations; exit 1)
+    [ $(echo "$cmd" | wc -w) -ge 2 ] \
+      || (echo FAIL: Default quote must have at least two words ; exit 1)
+    [[ "$env_name" == "FONT" ]] \
+      || (echo FAIL: Failed to find FONT env; exit 1)
+    [[ "$font_name" != "standard" ]] \
+      || (echo FAIL: FONT value does not match expectations; exit 1)
+    [[ "$author_label" == "${CI_COMMIT_BRANCH#student/}" ]] \
+      || (echo FAIL: Image label `author` does not match expectations; exit 1)
+    run_args="$(docker run --rm $CONTAINER_IMAGE_NAME Docker rocks!)"
+    run_no_args="$(docker run --rm $CONTAINER_IMAGE_NAME)"
+    run_font="$(docker run --rm --env=FONT=standard $CONTAINER_IMAGE_NAME Docker rocks!)"
+    [[ "run_args" != "run_no_args" ]] \
+      || (echo FAIL: Image CMD does not match expectations; exit 1)
+    [[ "run_args" != "run_font" ]] \
+      || (echo FAIL: Image FONT env has no effect on the output; exit 1)
+    [ "$working_dir" ] \
+      || (echo FAIL: Image has no working dir defined; exit 1)
+    [[ "$entrypoint_script_path" == "${entrypoint_script_path#$working_dir}" ]] \
+      || (echo FAIL: Entry point script should not be in working directory; exit 1)
+    echo "$run_no_args"

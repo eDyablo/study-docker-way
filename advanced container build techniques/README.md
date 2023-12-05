@@ -14,6 +14,9 @@
   - set of files
   - directory
   - set of directories
+  - --link
+- ADD
+  - use git repository
 - ARG
   - value substitution
 - define image template
