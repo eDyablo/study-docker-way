@@ -8,7 +8,7 @@
 
 [Build with Dockerfile](/build%20with%20dockerfile/README.md)
 
-:soon: [Run a container from built image](/run%20a%20container%20from%20built%20image/README.md)
+~~:soon: [Run a container from built image](/run%20a%20container%20from%20built%20image/README.md)~~
 
 :soon: [Build with multi stage](/build%20with%20mutli%20stage/README.md)
 
