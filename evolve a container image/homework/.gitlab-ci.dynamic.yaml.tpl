@@ -3,6 +3,6 @@ evolve a container image:
   script:
   - |
     sh /menu.sh > menu.output
-    [ \"\$DISH\" != \"stew\" ] \
+    [ \"\$DISH\" -a \"\$DISH\" != \"stew\" ] \
       || (echo FAIL: Looks like you did not set DISH environment value; exit 1)
     cat menu.output
