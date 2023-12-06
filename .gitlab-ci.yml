@@ -8,6 +8,7 @@ check assignment:
       - course introduction
       - use container images
       - evolve a container image
+      - build with dockerfile
   trigger:
     include:
     - local: $SESSION_NAME/homework/.gitlab-ci.yml
