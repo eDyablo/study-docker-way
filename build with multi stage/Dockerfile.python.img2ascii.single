@@ -1,0 +1,10 @@
+FROM alpine
+
+RUN apk add py3-pip
+
+RUN pip install numpy pillow
+
+COPY ["img2ascii.py", "img2ascii.sh", "/src/"]
+
+#ENTRYPOINT [ "python3", "/src/img2ascii.py" ]
+ENTRYPOINT [ "sh", "/src/img2ascii.sh" ]

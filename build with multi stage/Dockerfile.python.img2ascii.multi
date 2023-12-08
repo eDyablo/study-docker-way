@@ -1,0 +1,20 @@
+FROM alpine AS build
+
+RUN apk add \
+  binutils \
+  py3-pip
+
+RUN pip install \
+  numpy \
+  pillow \
+  pyinstaller
+
+COPY img2ascii.py /src/
+
+RUN pyinstaller --onefile /src/img2ascii.py
+
+FROM alpine
+
+COPY --from=build /dist/img2ascii /bin/img2ascii
+
+ENTRYPOINT [ "/bin/img2ascii" ]

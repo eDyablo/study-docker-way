@@ -1,0 +1,7 @@
+FROM alpine
+
+RUN apk add figlet
+
+RUN echo -e "keep calm\nand\ncontainerize" | figlet > poster
+
+CMD ["cat", "poster"]

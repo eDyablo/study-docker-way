@@ -1,0 +1,11 @@
+FROM alpine
+
+RUN apk add g++
+
+WORKDIR /src
+
+COPY hello.cpp .
+
+RUN g++ -o /bin/hello hello.cpp
+
+ENTRYPOINT [ "/bin/hello" ]

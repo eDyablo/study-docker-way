@@ -1,0 +1,51 @@
+variables:
+  CONTAINER_IMAGE_NAME: ${CONTAINER_IMAGE_REGISTRY_USER}/scrisoare:${CI_COMMIT_REF_SLUG}
+
+build container image:
+  stage: build
+  resource_group: ${CI_PROJECT_NAME} ${CI_COMMIT_BRANCH}
+  image:
+    name: gcr.io/kaniko-project/executor:debug
+    entrypoint: [""]
+  variables:
+    DOCKERFILE_CONTEXT: $ASSIGNMENT_WORKDIR
+    DOCKERFILE_NAME: Dockerfile
+    KANIKO_EXECUTOR: /kaniko/executor
+  script:
+  - >
+    echo
+    "{\"auths\":{\"${CONTAINER_IMAGE_REGISTRY_HOST}\":{\"auth\":\"$(echo -n ${CONTAINER_IMAGE_REGISTRY_USER}:${CONTAINER_IMAGE_REGISTRY_PASSWORD} | base64)\"}}}"
+    > /kaniko/.docker/config.json
+  - >
+    $KANIKO_EXECUTOR
+    ${CONTAINER_IMAGE_NAME:+--destination=$CONTAINER_IMAGE_NAME}
+    ${DOCKERFILE_CONTEXT:+--context="$DOCKERFILE_CONTEXT"}
+    ${DOCKERFILE_NAME:+--dockerfile="$DOCKERFILE_NAME"}
+
+test container image:
+  needs:
+  - job: build container image
+  stage: test
+  resource_group: !reference [build container image, resource_group]
+  image: docker
+  services:
+  - docker:dind
+  variables:
+    BUSYBOX_CONTAINER_IMAGE_NAME: busybox:1.36.1
+  script:
+  - |
+    docker pull $BUSYBOX_CONTAINER_IMAGE_NAME
+    busybox_layer_0=$(docker image inspect $BUSYBOX_CONTAINER_IMAGE_NAME --format='{{ index .RootFS.Layers 0 }}')
+    docker pull $CONTAINER_IMAGE_NAME
+    image_layer_0=$(docker image inspect $CONTAINER_IMAGE_NAME --format='{{ index .RootFS.Layers 0 }}')
+    [ "$image_layer_0" == "$busybox_layer_0" ] \
+      || (echo FAIL: Your image is not based on ${BUSYBOX_CONTAINER_IMAGE_NAME}; exit 1)
+    [ ! "$(docker run --rm --entrypoint '/bin/sh' $CONTAINER_IMAGE_NAME -c 'find / -name figlet')" ] \
+      || (echo FAIL: Image must not contain `figlet` tool; exit 1)
+    [ ! "$(docker run --rm --entrypoint '/bin/sh' $CONTAINER_IMAGE_NAME -c 'find / -name letter.sh')" ] \
+      || (echo FAIL: Image must not contain `letter.sh` script; exit 1)
+    [ "$(docker run --rm --entrypoint '/bin/sh' $CONTAINER_IMAGE_NAME -c 'find / -name envelope.sh')" ] \
+      || (echo FAIL: Image must contain `envelope.sh` script; exit 1)
+    [ "$(docker run --rm --entrypoint '/bin/sh' $CONTAINER_IMAGE_NAME -c 'find / -name letter-to-santa')" ] \
+      || (echo FAIL: Image must contain `letter-to-santa` file; exit 1)
+    docker run --rm $CONTAINER_IMAGE_NAME

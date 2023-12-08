@@ -1,0 +1,15 @@
+FROM alpine AS build
+
+RUN apk add g++
+
+WORKDIR /src
+
+COPY hello.cpp .
+
+RUN g++ -static -o /bin/hello hello.cpp
+
+FROM scratch
+
+COPY --from=build /bin/hello /bin/hello
+
+CMD [ "/bin/hello" ]

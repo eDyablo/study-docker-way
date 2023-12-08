@@ -1,0 +1,11 @@
+FROM golang as build
+
+COPY hello.go /src/hello.go
+
+RUN go build -o /bin/hello /src/hello.go
+
+FROM scratch
+
+COPY --from=build /bin/hello /bin/hello
+
+ENTRYPOINT [ "/bin/hello" ]

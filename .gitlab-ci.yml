@@ -9,6 +9,7 @@ check assignment:
       - use container images
       - evolve a container image
       - build with dockerfile
+      - build with multi stage
   trigger:
     include:
     - local: $SESSION_NAME/homework/.gitlab-ci.yml

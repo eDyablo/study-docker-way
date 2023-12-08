@@ -1,0 +1,25 @@
+FROM alpine AS build
+
+RUN apk add figlet
+
+FROM build AS poster1
+
+RUN echo -e "keep calm\nand\ncontainerize" | figlet > poster
+
+FROM build AS poster2
+
+RUN echo -e "keep calm\nand\ndockerize" | figlet > poster
+
+FROM busybox AS union
+
+COPY --from=poster1 poster poster1
+COPY --from=poster2 poster poster2
+
+RUN cat poster1 >> poster
+RUN cat poster2 >> poster
+
+FROM busybox
+
+COPY --from=union poster poster
+
+CMD ["cat", "poster"]

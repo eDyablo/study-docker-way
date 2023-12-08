@@ -1,0 +1,7 @@
+FROM alpine AS build
+
+RUN apk add python3
+
+COPY hello.py /src/
+
+ENTRYPOINT [ "python3", "/src/hello.py" ]

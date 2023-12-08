@@ -1,0 +1,11 @@
+FROM alpine AS first
+
+RUN apk add figlet
+
+RUN echo -e "keep calm\nand\ncontainerize" | figlet > poster
+
+FROM busybox
+
+COPY --from=first poster poster
+
+CMD ["cat", "poster"]

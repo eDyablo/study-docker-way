@@ -1,0 +1,7 @@
+FROM golang as build
+
+COPY hello.go /src/hello.go
+
+RUN go build -o /bin/hello /src/hello.go
+
+ENTRYPOINT [ "/bin/hello" ]
