@@ -30,7 +30,7 @@
 
 [Build with dockerfile homework](/build%20with%20dockerfile/homework/README.md)
 
-[Build with multi stage](/build%20with%20multi%20stage/homework/README.md)
+[Build with multi stage homework](/build%20with%20multi%20stage/homework/README.md)
 
 ---
 <div align="right">[:loudspeaker: Report issue](https://gitlab.lohika.com/study/docker/way/-/issues/new)</div>
