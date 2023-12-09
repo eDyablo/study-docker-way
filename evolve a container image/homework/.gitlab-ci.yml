@@ -1,4 +1,4 @@
-generate pipeline:
+.generate pipeline:
   stage: .pre
   artifacts:
     paths:
@@ -14,7 +14,7 @@ generate pipeline:
   - CONTAINER_IMAGE_NAME="${CONTAINER_REPOSITORY}:${CONTAINER_TAG}"
   - eval "echo \"$(cat .gitlab-ci.dynamic.yaml.tpl)\"" > .gitlab-ci.dynamic.yaml
 
-trigger pipeline:
+.trigger pipeline:
   needs:
   - job: generate pipeline
   trigger:
@@ -22,3 +22,28 @@ trigger pipeline:
     - artifact: evolve a container image/homework/.gitlab-ci.dynamic.yaml
       job: generate pipeline
     strategy: depend
+
+evolve a container image:
+  stage: test
+  image: docker
+  services:
+  - docker:dind
+  script:
+  - cd "$ASSIGNMENT_WORKDIR"
+  - |
+    DOCKERHUB_ACCOUNT=$(cat dockerhub-account.txt)
+    [ $DOCKERHUB_ACCOUNT ] \
+      || (echo FAIL: No Dockerhub account specified; exit 1)
+    CONTAINER_TAG=${CI_COMMIT_BRANCH#student/}
+    CONTAINER_REPOSITORY="${DOCKERHUB_ACCOUNT}/jadlospis"
+    CONTAINER_IMAGE_NAME="${CONTAINER_REPOSITORY}:${CONTAINER_TAG}"
+    docker pull $CONTAINER_IMAGE_NAME
+    image_cmd="$(docker image inspect $CONTAINER_IMAGE_NAME \
+      --format='{{ join .Config.Cmd " " }}')"
+    (echo "$image_cmd" | grep '^\(/bin/sh -c sh /menu.sh\|sh /menu.sh\)$') \
+      || (echo FAIL: Image cmd does not match expectations; exit 1)
+    image_env="$(docker image inspect $CONTAINER_IMAGE_NAME \
+      --format='{{ join .Config.Env " " }}')"
+    (echo "$image_env" | grep 'DISH=\S\+') \
+      && (echo "$image_env" | grep -v 'DISH=stew') \
+      || (echo FAIL: Looks like you did not set DISH environment value; exit 1)
