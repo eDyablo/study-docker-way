@@ -10,6 +10,7 @@ check assignment:
       - evolve a container image
       - build with dockerfile
       - build with multi stage
+      - networking
   trigger:
     include:
     - local: $SESSION_NAME/homework/.gitlab-ci.yml

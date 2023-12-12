@@ -1,0 +1,52 @@
+variables:
+  CONTAINER_IMAGE_NAME: ${CONTAINER_IMAGE_REGISTRY_USER}/cantec-de-leagan:${CI_COMMIT_REF_SLUG}
+
+build container image:
+  stage: build
+  resource_group: ${CI_PROJECT_NAME} ${CI_COMMIT_BRANCH}
+  image:
+    name: gcr.io/kaniko-project/executor:debug
+    entrypoint: [""]
+  variables:
+    DOCKERFILE_CONTEXT: $ASSIGNMENT_WORKDIR
+    DOCKERFILE_NAME: Dockerfile
+    KANIKO_EXECUTOR: /kaniko/executor
+  script:
+  - >
+    echo
+    "{\"auths\":{\"${CONTAINER_IMAGE_REGISTRY_HOST}\":{\"auth\":\"$(echo -n ${CONTAINER_IMAGE_REGISTRY_USER}:${CONTAINER_IMAGE_REGISTRY_PASSWORD} | base64)\"}}}"
+    > /kaniko/.docker/config.json
+  - >
+    $KANIKO_EXECUTOR
+    ${CONTAINER_IMAGE_NAME:+--destination=$CONTAINER_IMAGE_NAME}
+    ${DOCKERFILE_CONTEXT:+--context="$DOCKERFILE_CONTEXT"}
+    ${DOCKERFILE_NAME:+--dockerfile="$DOCKERFILE_NAME"}
+
+test container image:
+  needs:
+  - job: build container image
+  stage: test
+  resource_group: !reference [build container image, resource_group]
+  image: docker
+  services:
+  - docker:dind
+  variables:
+    GIT_STRATEGY: none
+    BUSYBOX_CONTAINER_IMAGE_NAME: busybox
+  script:
+  - |
+    docker pull $CONTAINER_IMAGE_NAME
+    docker pull $BUSYBOX_CONTAINER_IMAGE_NAME
+    exposed_port=$(docker image inspect $CONTAINER_IMAGE_NAME --format \
+      '{{ range $k,$v := .Config.ExposedPorts }}{{ println (index (split $k "/") 0) }}{{ end }}' | head -1)
+    [ "$exposed_port" ] \
+      || (echo FAIL: No exposed port; exit 1)
+    port_env=$(docker image inspect $CONTAINER_IMAGE_NAME --format \
+      '{{ range .Config.Env }}{{ $env := split . "=" }}{{ if eq "PORT" (index $env 0) }}{{ println (index $env 1)}}{{ end }}{{ end }}' | head -1)
+    [ "$port_env" ] \
+      || (echo FAIL: No PORT environment defined; exit 1)
+    [ "$exposed_port" == "$port_env" ] \
+      || (echo FAIL: Exposed port must be equal to PORT environment; exit 1)
+    container_id=$(docker run --rm --detach --publish=54321:${exposed_port} $CONTAINER_IMAGE_NAME)
+    container_ip=$(docker container inspect $container_id --format '{{ .NetworkSettings.Networks.bridge.IPAddress }}')
+    docker run --rm $BUSYBOX_CONTAINER_IMAGE_NAME nc $container_ip $exposed_port
