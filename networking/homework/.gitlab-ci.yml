@@ -39,14 +39,23 @@ test container image:
     docker pull $BUSYBOX_CONTAINER_IMAGE_NAME
     exposed_port=$(docker image inspect $CONTAINER_IMAGE_NAME --format \
       '{{ range $k,$v := .Config.ExposedPorts }}{{ println (index (split $k "/") 0) }}{{ end }}' | head -1)
+    echo "exposed_port=${exposed_port}"
     [ "$exposed_port" ] \
       || (echo FAIL: No exposed port; exit 1)
     port_env=$(docker image inspect $CONTAINER_IMAGE_NAME --format \
       '{{ range .Config.Env }}{{ $env := split . "=" }}{{ if eq "PORT" (index $env 0) }}{{ println (index $env 1)}}{{ end }}{{ end }}' | head -1)
+    echo "port_env=${port_env}"
     [ "$port_env" ] \
       || (echo FAIL: No PORT environment defined; exit 1)
     [ "$exposed_port" == "$port_env" ] \
       || (echo FAIL: Exposed port must be equal to PORT environment; exit 1)
-    container_id=$(docker run --rm --detach --publish=54321:${exposed_port} $CONTAINER_IMAGE_NAME)
+    container_id=$(docker run --rm --detach $CONTAINER_IMAGE_NAME)
+    echo "container_id=${container_id}"
+    sleep 5 # TODO: use healthcheck to avoid unconditional sleep
+    docker logs $container_id
     container_ip=$(docker container inspect $container_id --format '{{ .NetworkSettings.Networks.bridge.IPAddress }}')
-    docker run --rm $BUSYBOX_CONTAINER_IMAGE_NAME nc $container_ip $exposed_port
+    echo "container_ip=${container_ip}"
+    docker run --rm \
+      --attach STDERR --attach STDOUT \
+      $BUSYBOX_CONTAINER_IMAGE_NAME \
+      nc $container_ip $exposed_port
