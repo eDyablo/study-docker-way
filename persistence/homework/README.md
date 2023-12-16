@@ -112,10 +112,10 @@ You should see the number increasing.
 
 ### Publish the change
 
-Commit and push modified `Dockerfile` by running the following commands.
+Commit and push modified `Dockerfile` adn `itinerary` by running the following commands.
 
 ```sh
-git add Dockerfile
+git add Dockerfile itinerary
 git commit --all --message 'happy journey'
 git push
 ```

@@ -34,7 +34,7 @@
 
 [Networking homework](/networking/homework/README.md)
 
-:soon: [Persistence homework](/persistence/homework/README.md)
+[Persistence homework](/persistence/homework/README.md)
 
 ---
 <div align="right">[:loudspeaker: Report issue](https://gitlab.lohika.com/study/docker/way/-/issues/new)</div>
