@@ -1,0 +1,32 @@
+.build container image job:
+  stage: build
+  rules:
+  - changes:
+    - ${ASSIGNMENT_WORKDIR}/${DOCKERFILE_NAME}
+  resource_group: ${CI_PROJECT_NAME} ${CI_COMMIT_BRANCH}
+  image:
+    name: gcr.io/kaniko-project/executor:debug
+    entrypoint: [""]
+  variables:
+    DOCKERFILE_CONTEXT: $ASSIGNMENT_WORKDIR
+    DOCKERFILE_NAME: Dockerfile
+    KANIKO_EXECUTOR: /kaniko/executor
+  script:
+  - >
+    echo
+    "{\"auths\":{\"${CONTAINER_IMAGE_REGISTRY_HOST}\":{\"auth\":\"$(echo -n ${CONTAINER_IMAGE_REGISTRY_USER}:${CONTAINER_IMAGE_REGISTRY_PASSWORD} | base64)\"}}}"
+    > /kaniko/.docker/config.json
+  - >
+    $KANIKO_EXECUTOR
+    ${CONTAINER_IMAGE_NAME:+--destination=$CONTAINER_IMAGE_NAME}
+    ${DOCKERFILE_CONTEXT:+--context="$DOCKERFILE_CONTEXT"}
+    ${DOCKERFILE_NAME:+--dockerfile="$DOCKERFILE_NAME"}
+
+.test container image job:
+  stage: test
+  resource_group: !reference [.build container image job, resource_group]
+  image: docker
+  services:
+  - docker:dind
+  variables:
+    GIT_STRATEGY: none

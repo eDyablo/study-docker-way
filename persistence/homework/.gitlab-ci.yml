@@ -1,0 +1,77 @@
+include:
+- .gitlab-ci.homework.yml
+
+variables:
+  CONTAINER_IMAGE_NAME: ${CONTAINER_IMAGE_REGISTRY_USER}/calatorie:${CI_COMMIT_REF_SLUG}
+
+build container image:
+  extends: .build container image job
+
+test container image:
+  extends: .test container image job
+  needs:
+  - job: build container image
+    optional: true
+  variables:
+    GIT_STRATEGY: clone
+  script:
+  - | # Test itinerary
+    expected_number=3
+    number_of_places=$(cat ${ASSIGNMENT_WORKDIR}/itinerary | sort | uniq | wc -l | tr -d ' ')
+    [ $number_of_places -ge $expected_number ] \
+      || (echo FAIL: Itinerary must have at least $expected_number different places$'\n'"$(cat ${ASSIGNMENT_WORKDIR}/itinerary)"; exit 1)
+  - docker pull $CONTAINER_IMAGE_NAME
+  - | # Test working dir
+    workig_dir=$(docker image inspect $CONTAINER_IMAGE_NAME --format '{{ .Config.WorkingDir }}')
+    [ "$workig_dir" == '/workspace' ] \
+      || (echo FAIL: Image working dir does not match expectations$'\n'"${workig_dir}"; exit 1)
+  - | # Test volumes set
+    volumes=$(docker image inspect $CONTAINER_IMAGE_NAME --format \
+      '{{ range $k,$v := .Config.Volumes }}{{ println $k }}{{ end }}')
+    [ "${volumes//$'\n'/}" == "/config/state/workspace" ] \
+      || (echo FAIL: Image volumes set does not match expectations$'\n'"${volumes}"; exit 1)
+  - | # Test pre-populated volume
+    container_id=$(docker create $CONTAINER_IMAGE_NAME)
+    file_path=/config/font
+    file_content=$(docker run --rm --volumes-from $container_id busybox sh -c "cat $file_path" || echo)
+    [ "$file_content" ] \
+      || (echo FAIL: Failed to read pre-populated file $file_path$'\n'"${file_content}"; exit 1)
+    file_path=/config/fonts
+    file_content=$(docker run --rm --volumes-from $container_id busybox sh -c "cat $file_path" || echo)
+    [ "$file_content" ] \
+      || (echo FAIL: Failed to read pre-populated file $file_path$'\n'"${file_content}"; exit 1)
+  - | # Test state persistence
+    VOLUME_NAME_PREFIX=${CONTAINER_IMAGE_NAME//\//-}
+    VOLUME_NAME_PREFIX=${VOLUME_NAME_PREFIX//:/-}
+    docker volume rm ${VOLUME_NAME_PREFIX}-state --force
+    places='first second'
+    state_log=$(for place in $places; do
+      docker run --rm --mount type=volume,src=${VOLUME_NAME_PREFIX}-state1,dst=/state \
+        $CONTAINER_IMAGE_NAME $place | tail -n +1 | head -1
+    done)
+    [ "$state_log" == "$(seq $(echo $places | wc -w))" ] \
+      || (echo FAIL: Container state is not persistent$'\n'"${state_log}"; exit 1)
+  - | # Test resulting files
+    cat ${ASSIGNMENT_WORKDIR}/itinerary | while read place ; do
+      docker run --rm \
+        --mount type=volume,src=${VOLUME_NAME_PREFIX}-state2,dst=/state \
+        --mount type=bind,src=./${ASSIGNMENT_WORKDIR},dst=/workspace \
+        $CONTAINER_IMAGE_NAME $place > /dev/null
+    done
+    file_paths=$(for i in $(seq $(cat ${ASSIGNMENT_WORKDIR}/itinerary | wc -l)); do
+      echo "${ASSIGNMENT_WORKDIR}/itinerary-point-$(printf '%*.*d' 3 3 $i)"
+    done)
+    for file_path in $file_paths; do
+      [ -f $file_path ] \
+        || (echo FAIL: Resulting file $file_path is missing$'\n'"$(ls $ASSIGNMENT_WORKDIR)"; exit 1)
+    done
+    echo On our journey we are going to visit
+    cat $file_paths
+  after_script:
+  - | # Clean up
+    VOLUME_NAME_PREFIX=${CONTAINER_IMAGE_NAME//\//-}
+    VOLUME_NAME_PREFIX=${VOLUME_NAME_PREFIX//:/-}
+    docker volume rm --force $(docker volume list --format \
+      "{{ if eq 2 (len (split .Name \"$VOLUME_NAME_PREFIX\")) }}{{ print .Name }}{{ end }}")
+    docker container prune --force
+    docker volume prune --force

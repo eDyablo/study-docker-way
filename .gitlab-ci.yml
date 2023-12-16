@@ -11,6 +11,7 @@ check assignment:
       - build with dockerfile
       - build with multi stage
       - networking
+      - persistence
   trigger:
     include:
     - local: $SESSION_NAME/homework/.gitlab-ci.yml
