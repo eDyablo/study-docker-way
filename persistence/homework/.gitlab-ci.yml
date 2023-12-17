@@ -16,8 +16,11 @@ test container image:
     GIT_STRATEGY: clone
   script:
   - | # Test itinerary
+    itinerary=$(cat ${ASSIGNMENT_WORKDIR}/itinerary | while read line; do
+      echo $line | tr '[:upper:]' '[:lower:]' | tr -cd '[:alnum:]\n'
+    done)
     expected_number=3
-    number_of_places=$(cat ${ASSIGNMENT_WORKDIR}/itinerary | sort | uniq | wc -l | tr -d ' ')
+    number_of_places=$(echo "$itinerary" | sort | uniq | wc -l | tr -d ' ')
     [ $number_of_places -ge $expected_number ] \
       || (echo FAIL: Itinerary must have at least $expected_number different places$'\n'"$(cat ${ASSIGNMENT_WORKDIR}/itinerary)"; exit 1)
   - docker pull $CONTAINER_IMAGE_NAME
