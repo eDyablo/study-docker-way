@@ -1,0 +1,6 @@
+FROM busybox
+
+COPY file-a file-b workspace/
+
+COPY dir-a dir-b workspace/
+

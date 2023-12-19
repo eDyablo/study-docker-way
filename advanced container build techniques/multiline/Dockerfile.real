@@ -1,0 +1,18 @@
+FROM alpine
+
+# Install system level components
+RUN \ 
+  apk add --update --no-cache \
+    binutils \
+    py3-pip \
+  && pip install --upgrade --break-system-packages \
+    pip
+
+# Install python packages
+RUN \
+  pip install --upgrade --break-system-packages \
+    click \
+    pyinstaller
+
+WORKDIR /var/workspace
+

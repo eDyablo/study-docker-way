@@ -1,0 +1,8 @@
+FROM alpine
+
+RUN \
+  apk update \
+  && apk add figlet \
+  && apk add cowsay \
+    --repository=https://dl-cdn.alpinelinux.org/alpine/edge/testing
+

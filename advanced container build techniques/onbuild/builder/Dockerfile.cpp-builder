@@ -1,0 +1,9 @@
+FROM alpine
+
+RUN apk add --update --no-cache g++
+
+ONBUILD ADD src /src
+
+ONBUILD RUN mkdir /out
+
+ONBUILD RUN g++ -static -o /out/app /src/*.cpp

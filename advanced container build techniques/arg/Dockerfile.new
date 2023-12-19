@@ -1,0 +1,10 @@
+FROM alpine
+
+RUN apk add --update --no-cache figlet
+
+ARG DEFAULT_FONT=big
+
+ENV FONT=${DEFAULT_FONT}
+
+ENTRYPOINT [ "sh", "-c", "echo $0 $@ | figlet -f$FONT" ]
+
