@@ -1,0 +1,19 @@
+version: '3.0'
+services:
+  producer:
+    image: busybox
+    command:
+    - sh
+    - -c
+    - |
+      sleep 1
+      echo hello | nc -v -l -p 54321
+  consumer:
+    image: busybox
+    command:
+    - sh
+    - -c
+    - nc -v producer 54321
+    depends_on:
+    - producer
+

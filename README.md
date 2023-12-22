@@ -18,7 +18,7 @@
 
 [Advanced container build techniques](/advanced%20container%20build%20techniques/README.md)
 
-:soon: [Docker compose](/docker%20compose/README.md)
+[Docker compose](/docker%20compose/README.md)
 
 # Homeworks
 
@@ -37,6 +37,8 @@
 [Persistence homework](/persistence/homework/README.md)
 
 :soon: [Advanced container build techniques homework](/advanced%20container%20build%20techniques/homework/README.md)
+
+:soon: [Docker compose homework](/docker%20compose/homework/README.md)
 
 ---
 <div align="right">[:loudspeaker: Report issue](https://gitlab.lohika.com/study/docker/way/-/issues/new)</div>

@@ -1,0 +1,6 @@
+FROM busybox
+
+COPY applicant.sh .
+
+ENTRYPOINT [ "sh", "applicant.sh" ]
+

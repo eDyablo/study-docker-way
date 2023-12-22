@@ -1,0 +1,6 @@
+FROM busybox
+
+COPY init.sh .
+
+ENTRYPOINT [ "sh", "init.sh" ]
+

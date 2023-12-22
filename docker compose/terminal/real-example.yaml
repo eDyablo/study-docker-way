@@ -1,0 +1,11 @@
+services:
+  runner:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: organization.net/images/devops-tools-helm-job-runner
+    volumes:
+    - .:/var/workspace:rw
+    - ~/.aws:/home/default/.aws:ro
+    - ~/.kube:/home/default/.kube:ro
+    - ~/.ssh:/home/default/.ssh:ro

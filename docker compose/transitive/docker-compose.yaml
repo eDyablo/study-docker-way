@@ -1,0 +1,20 @@
+version: '3'
+services:
+  board:
+    build:
+      dockerfile: Dockerfile.board
+  init:
+    build:
+      dockerfile: Dockerfile.init
+    depends_on:
+      board:
+        condition: service_healthy
+  applicant:
+    build:
+      dockerfile: Dockerfile.applicant
+    depends_on:
+      init:
+        condition: service_completed_successfully
+    deploy:
+      replicas: 2
+

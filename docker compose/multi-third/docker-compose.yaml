@@ -1,0 +1,25 @@
+version: '3.0'
+services:
+  producer:
+    image: busybox
+    command:
+    - sh
+    - -c
+    - |
+      sleep 3
+      while true; do
+        echo hello | nc -v -l -p 54321
+      done
+    healthcheck:
+      test: ["CMD", "nc", "-z", "localhost", "54321"]
+      interval: 5s
+  consumer:
+    image: busybox
+    command:
+    - sh
+    - -c
+    - nc -v producer 54321
+    depends_on:
+      producer:
+        condition: service_healthy
+

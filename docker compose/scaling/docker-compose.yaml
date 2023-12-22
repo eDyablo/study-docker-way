@@ -1,0 +1,18 @@
+version: '3.0'
+services:
+  producer:
+    build: .
+    deploy:
+      replicas: 3
+  consumer:
+    image: busybox
+    command:
+    - sh
+    - -c
+    - nc producer 54321
+    depends_on:
+      producer:
+        condition: service_healthy
+    deploy:
+      replicas: 8
+

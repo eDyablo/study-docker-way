@@ -1,0 +1,8 @@
+FROM busybox
+
+COPY board.sh .
+
+HEALTHCHECK --interval=3s CMD [ "nc", "-z", "localhost", "54321" ]
+
+ENTRYPOINT [ "sh", "board.sh" ]
+

@@ -1,0 +1,14 @@
+version: '3.0'
+services:
+  terminal:
+    build: .
+    volumes:
+    - .:/workspace
+    working_dir: /workspace
+    command:
+    - sh
+    - -c
+    - |
+      echo Welcome to Terminal | figlet -fmini
+      sh
+
