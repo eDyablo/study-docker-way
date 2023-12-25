@@ -21,6 +21,7 @@
     ${CONTAINER_IMAGE_NAME:+--destination=$CONTAINER_IMAGE_NAME}
     ${DOCKERFILE_CONTEXT:+--context="$DOCKERFILE_CONTEXT"}
     ${DOCKERFILE_NAME:+--dockerfile="$DOCKERFILE_NAME"}
+    $(for build_arg in $CONTAINER_IMAGE_BUILD_ARGS; do echo "--build-arg=${build_arg}"; done)
 
 .test container image job:
   stage: test

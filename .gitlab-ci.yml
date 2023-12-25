@@ -12,6 +12,7 @@ check assignment:
       - build with multi stage
       - networking
       - persistence
+      - advanced container build techniques
   trigger:
     include:
     - local: $SESSION_NAME/homework/.gitlab-ci.yml

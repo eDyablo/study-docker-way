@@ -36,7 +36,7 @@
 
 [Persistence homework](/persistence/homework/README.md)
 
-:soon: [Advanced container build techniques homework](/advanced%20container%20build%20techniques/homework/README.md)
+[Advanced container build techniques homework](/advanced%20container%20build%20techniques/homework/README.md)
 
 :soon: [Docker compose homework](/docker%20compose/homework/README.md)
 
